@@ -1,0 +1,17 @@
+C:\Users\Tomas\Desktop\Programacion3_tp\CATALOGO-NET\CATALOGO\PRESENTACION\bin\Debug\PRESENTACION.exe.config
+C:\Users\Tomas\Desktop\Programacion3_tp\CATALOGO-NET\CATALOGO\PRESENTACION\bin\Debug\PRESENTACION.exe
+C:\Users\Tomas\Desktop\Programacion3_tp\CATALOGO-NET\CATALOGO\PRESENTACION\bin\Debug\PRESENTACION.pdb
+C:\Users\Tomas\Desktop\Programacion3_tp\CATALOGO-NET\CATALOGO\PRESENTACION\bin\Debug\DOMINIO.dll
+C:\Users\Tomas\Desktop\Programacion3_tp\CATALOGO-NET\CATALOGO\PRESENTACION\bin\Debug\NEGOCIO.dll
+C:\Users\Tomas\Desktop\Programacion3_tp\CATALOGO-NET\CATALOGO\PRESENTACION\bin\Debug\DAO.dll
+C:\Users\Tomas\Desktop\Programacion3_tp\CATALOGO-NET\CATALOGO\PRESENTACION\bin\Debug\DOMINIO.pdb
+C:\Users\Tomas\Desktop\Programacion3_tp\CATALOGO-NET\CATALOGO\PRESENTACION\bin\Debug\NEGOCIO.pdb
+C:\Users\Tomas\Desktop\Programacion3_tp\CATALOGO-NET\CATALOGO\PRESENTACION\bin\Debug\DAO.pdb
+C:\Users\Tomas\Desktop\Programacion3_tp\CATALOGO-NET\CATALOGO\PRESENTACION\obj\Debug\PRESENTACION.csprojAssemblyReference.cache
+C:\Users\Tomas\Desktop\Programacion3_tp\CATALOGO-NET\CATALOGO\PRESENTACION\obj\Debug\PRESENTACION.Form1.resources
+C:\Users\Tomas\Desktop\Programacion3_tp\CATALOGO-NET\CATALOGO\PRESENTACION\obj\Debug\PRESENTACION.Properties.Resources.resources
+C:\Users\Tomas\Desktop\Programacion3_tp\CATALOGO-NET\CATALOGO\PRESENTACION\obj\Debug\PRESENTACION.csproj.GenerateResource.cache
+C:\Users\Tomas\Desktop\Programacion3_tp\CATALOGO-NET\CATALOGO\PRESENTACION\obj\Debug\PRESENTACION.csproj.CoreCompileInputs.cache
+C:\Users\Tomas\Desktop\Programacion3_tp\CATALOGO-NET\CATALOGO\PRESENTACION\obj\Debug\PRESENTACION.csproj.CopyComplete
+C:\Users\Tomas\Desktop\Programacion3_tp\CATALOGO-NET\CATALOGO\PRESENTACION\obj\Debug\PRESENTACION.exe
+C:\Users\Tomas\Desktop\Programacion3_tp\CATALOGO-NET\CATALOGO\PRESENTACION\obj\Debug\PRESENTACION.pdb

@@ -1,0 +1,9 @@
+C:\Users\Tomas\Desktop\Programacion3_tp\CATALOGO-NET\CATALOGO\DOMINIO\bin\Debug\netstandard2.0\DOMINIO.deps.json
+C:\Users\Tomas\Desktop\Programacion3_tp\CATALOGO-NET\CATALOGO\DOMINIO\bin\Debug\netstandard2.0\DOMINIO.dll
+C:\Users\Tomas\Desktop\Programacion3_tp\CATALOGO-NET\CATALOGO\DOMINIO\bin\Debug\netstandard2.0\DOMINIO.pdb
+C:\Users\Tomas\Desktop\Programacion3_tp\CATALOGO-NET\CATALOGO\DOMINIO\obj\Debug\netstandard2.0\DOMINIO.csprojAssemblyReference.cache
+C:\Users\Tomas\Desktop\Programacion3_tp\CATALOGO-NET\CATALOGO\DOMINIO\obj\Debug\netstandard2.0\DOMINIO.AssemblyInfoInputs.cache
+C:\Users\Tomas\Desktop\Programacion3_tp\CATALOGO-NET\CATALOGO\DOMINIO\obj\Debug\netstandard2.0\DOMINIO.AssemblyInfo.cs
+C:\Users\Tomas\Desktop\Programacion3_tp\CATALOGO-NET\CATALOGO\DOMINIO\obj\Debug\netstandard2.0\DOMINIO.csproj.CoreCompileInputs.cache
+C:\Users\Tomas\Desktop\Programacion3_tp\CATALOGO-NET\CATALOGO\DOMINIO\obj\Debug\netstandard2.0\DOMINIO.dll
+C:\Users\Tomas\Desktop\Programacion3_tp\CATALOGO-NET\CATALOGO\DOMINIO\obj\Debug\netstandard2.0\DOMINIO.pdb

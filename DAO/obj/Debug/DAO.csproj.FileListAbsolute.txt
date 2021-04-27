@@ -1,0 +1,9 @@
+C:\Users\Tomas\Desktop\Programacion3_tp\CATALOGO-NET\CATALOGO\DAO\bin\Debug\DAO.dll
+C:\Users\Tomas\Desktop\Programacion3_tp\CATALOGO-NET\CATALOGO\DAO\bin\Debug\DAO.pdb
+C:\Users\Tomas\Desktop\Programacion3_tp\CATALOGO-NET\CATALOGO\DAO\bin\Debug\DOMINIO.dll
+C:\Users\Tomas\Desktop\Programacion3_tp\CATALOGO-NET\CATALOGO\DAO\bin\Debug\DOMINIO.pdb
+C:\Users\Tomas\Desktop\Programacion3_tp\CATALOGO-NET\CATALOGO\DAO\obj\Debug\DAO.csprojAssemblyReference.cache
+C:\Users\Tomas\Desktop\Programacion3_tp\CATALOGO-NET\CATALOGO\DAO\obj\Debug\DAO.csproj.CoreCompileInputs.cache
+C:\Users\Tomas\Desktop\Programacion3_tp\CATALOGO-NET\CATALOGO\DAO\obj\Debug\DAO.csproj.CopyComplete
+C:\Users\Tomas\Desktop\Programacion3_tp\CATALOGO-NET\CATALOGO\DAO\obj\Debug\DAO.dll
+C:\Users\Tomas\Desktop\Programacion3_tp\CATALOGO-NET\CATALOGO\DAO\obj\Debug\DAO.pdb
