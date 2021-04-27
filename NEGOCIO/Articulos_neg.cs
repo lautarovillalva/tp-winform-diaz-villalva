@@ -7,6 +7,7 @@ using System.Data;
 
 namespace NEGOCIO
 {
+    // comentario de prueba
     public class Articulos_neg
     {
 

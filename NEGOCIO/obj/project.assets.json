@@ -214,19 +214,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Tomas\\.nuget\\packages\\": {}
+    "C:\\Users\\Lautaro\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Tomas\\Desktop\\Programacion3_tp\\CATALOGO-NET\\CATALOGO\\NEGOCIO\\NEGOCIO.csproj",
+      "projectUniqueName": "C:\\Users\\Lautaro\\Documents\\GitHub\\CATALOGO-NET\\NEGOCIO\\NEGOCIO.csproj",
       "projectName": "NEGOCIO",
-      "projectPath": "C:\\Users\\Tomas\\Desktop\\Programacion3_tp\\CATALOGO-NET\\CATALOGO\\NEGOCIO\\NEGOCIO.csproj",
-      "packagesPath": "C:\\Users\\Tomas\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Tomas\\Desktop\\Programacion3_tp\\CATALOGO-NET\\CATALOGO\\NEGOCIO\\obj\\",
+      "projectPath": "C:\\Users\\Lautaro\\Documents\\GitHub\\CATALOGO-NET\\NEGOCIO\\NEGOCIO.csproj",
+      "packagesPath": "C:\\Users\\Lautaro\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Lautaro\\Documents\\GitHub\\CATALOGO-NET\\NEGOCIO\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\Tomas\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Lautaro\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -240,11 +240,11 @@
         "netstandard2.0": {
           "targetAlias": "netstandard2.0",
           "projectReferences": {
-            "C:\\Users\\Tomas\\Desktop\\Programacion3_tp\\CATALOGO-NET\\CATALOGO\\DAO\\DAO.csproj": {
-              "projectPath": "C:\\Users\\Tomas\\Desktop\\Programacion3_tp\\CATALOGO-NET\\CATALOGO\\DAO\\DAO.csproj"
+            "C:\\Users\\Lautaro\\Documents\\GitHub\\CATALOGO-NET\\DAO\\DAO.csproj": {
+              "projectPath": "C:\\Users\\Lautaro\\Documents\\GitHub\\CATALOGO-NET\\DAO\\DAO.csproj"
             },
-            "C:\\Users\\Tomas\\Desktop\\Programacion3_tp\\CATALOGO-NET\\CATALOGO\\DOMINIO\\DOMINIO.csproj": {
-              "projectPath": "C:\\Users\\Tomas\\Desktop\\Programacion3_tp\\CATALOGO-NET\\CATALOGO\\DOMINIO\\DOMINIO.csproj"
+            "C:\\Users\\Lautaro\\Documents\\GitHub\\CATALOGO-NET\\DOMINIO\\DOMINIO.csproj": {
+              "projectPath": "C:\\Users\\Lautaro\\Documents\\GitHub\\CATALOGO-NET\\DOMINIO\\DOMINIO.csproj"
             }
           }
         }
@@ -276,7 +276,7 @@
         ],
         "assetTargetFallback": true,
         "warn": true,
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.100\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.101\\RuntimeIdentifierGraph.json"
       }
     }
   }
