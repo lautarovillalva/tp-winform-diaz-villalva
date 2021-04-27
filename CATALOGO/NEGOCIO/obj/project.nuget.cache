@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "hhjukkUFuvONQEUTP1nuyJeUHGDAT5MmJ0d97/6XdGDmH6ADzzz8JIeYJJmHzsoK/nkbxiLTae/u35O4K+XCHg==",
+  "dgSpecHash": "OvNMFWunXyOK3u9UCwZh4fOA9aPnrHjndwbmjSUboE8Ksh2Cw75oLSt5i8yvKLlG/Q0155svuZU7LONOV0HEzA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Lautaro\\source\\repos\\CATALOGO\\NEGOCIO\\NEGOCIO.csproj",
+  "projectFilePath": "C:\\Users\\Lautaro\\Documents\\GitHub\\CATALOGO-NET\\CATALOGO\\NEGOCIO\\NEGOCIO.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Lautaro\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
     "C:\\Users\\Lautaro\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512"

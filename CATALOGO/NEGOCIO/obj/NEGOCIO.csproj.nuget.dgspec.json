@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Lautaro\\source\\repos\\CATALOGO\\NEGOCIO\\NEGOCIO.csproj": {}
+    "C:\\Users\\Lautaro\\Documents\\GitHub\\CATALOGO-NET\\CATALOGO\\NEGOCIO\\NEGOCIO.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Lautaro\\source\\repos\\CATALOGO\\NEGOCIO\\NEGOCIO.csproj": {
+    "C:\\Users\\Lautaro\\Documents\\GitHub\\CATALOGO-NET\\CATALOGO\\NEGOCIO\\NEGOCIO.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Lautaro\\source\\repos\\CATALOGO\\NEGOCIO\\NEGOCIO.csproj",
+        "projectUniqueName": "C:\\Users\\Lautaro\\Documents\\GitHub\\CATALOGO-NET\\CATALOGO\\NEGOCIO\\NEGOCIO.csproj",
         "projectName": "NEGOCIO",
-        "projectPath": "C:\\Users\\Lautaro\\source\\repos\\CATALOGO\\NEGOCIO\\NEGOCIO.csproj",
+        "projectPath": "C:\\Users\\Lautaro\\Documents\\GitHub\\CATALOGO-NET\\CATALOGO\\NEGOCIO\\NEGOCIO.csproj",
         "packagesPath": "C:\\Users\\Lautaro\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Lautaro\\source\\repos\\CATALOGO\\NEGOCIO\\obj\\",
+        "outputPath": "C:\\Users\\Lautaro\\Documents\\GitHub\\CATALOGO-NET\\CATALOGO\\NEGOCIO\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Lautaro\\AppData\\Roaming\\NuGet\\NuGet.Config",
