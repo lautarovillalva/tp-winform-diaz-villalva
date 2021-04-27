@@ -4,7 +4,8 @@ using System.Text;
 
 namespace DOMINIO
 {
-    class Categoria
+    public class Categoria
     {
+        public string Nombre { get; set; }
     }
 }
