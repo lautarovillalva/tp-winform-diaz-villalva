@@ -1,0 +1,6 @@
+C:\Users\Lautaro\Documents\GitHub\CATALOGO-NET\CATALOGO\DOMINIO\bin\Debug\DOMINIO.dll
+C:\Users\Lautaro\Documents\GitHub\CATALOGO-NET\CATALOGO\DOMINIO\bin\Debug\DOMINIO.pdb
+C:\Users\Lautaro\Documents\GitHub\CATALOGO-NET\CATALOGO\DOMINIO\obj\Debug\DOMINIO.csprojAssemblyReference.cache
+C:\Users\Lautaro\Documents\GitHub\CATALOGO-NET\CATALOGO\DOMINIO\obj\Debug\DOMINIO.csproj.CoreCompileInputs.cache
+C:\Users\Lautaro\Documents\GitHub\CATALOGO-NET\CATALOGO\DOMINIO\obj\Debug\DOMINIO.dll
+C:\Users\Lautaro\Documents\GitHub\CATALOGO-NET\CATALOGO\DOMINIO\obj\Debug\DOMINIO.pdb

@@ -1,0 +1,9 @@
+C:\Users\Lautaro\Documents\GitHub\CATALOGO-NET\CATALOGO\NEGOCIO\obj\Debug\NEGOCIO.csprojAssemblyReference.cache
+C:\Users\Lautaro\Documents\GitHub\CATALOGO-NET\CATALOGO\NEGOCIO\obj\Debug\NEGOCIO.csproj.CoreCompileInputs.cache
+C:\Users\Lautaro\Documents\GitHub\CATALOGO-NET\CATALOGO\NEGOCIO\bin\Debug\NEGOCIO.dll
+C:\Users\Lautaro\Documents\GitHub\CATALOGO-NET\CATALOGO\NEGOCIO\bin\Debug\NEGOCIO.pdb
+C:\Users\Lautaro\Documents\GitHub\CATALOGO-NET\CATALOGO\NEGOCIO\bin\Debug\DOMINIO.dll
+C:\Users\Lautaro\Documents\GitHub\CATALOGO-NET\CATALOGO\NEGOCIO\bin\Debug\DOMINIO.pdb
+C:\Users\Lautaro\Documents\GitHub\CATALOGO-NET\CATALOGO\NEGOCIO\obj\Debug\NEGOCIO.csproj.CopyComplete
+C:\Users\Lautaro\Documents\GitHub\CATALOGO-NET\CATALOGO\NEGOCIO\obj\Debug\NEGOCIO.dll
+C:\Users\Lautaro\Documents\GitHub\CATALOGO-NET\CATALOGO\NEGOCIO\obj\Debug\NEGOCIO.pdb

@@ -1,0 +1,16 @@
+C:\Users\Lautaro\Documents\GitHub\CATALOGO-NET\CATALOGO\PRESENTACION\obj\Debug\PRESENTACION.csprojAssemblyReference.cache
+C:\Users\Lautaro\Documents\GitHub\CATALOGO-NET\CATALOGO\PRESENTACION\obj\Debug\PRESENTACION.Bienvenido.resources
+C:\Users\Lautaro\Documents\GitHub\CATALOGO-NET\CATALOGO\PRESENTACION\obj\Debug\PRESENTACION.Inicio.resources
+C:\Users\Lautaro\Documents\GitHub\CATALOGO-NET\CATALOGO\PRESENTACION\obj\Debug\PRESENTACION.Properties.Resources.resources
+C:\Users\Lautaro\Documents\GitHub\CATALOGO-NET\CATALOGO\PRESENTACION\obj\Debug\PRESENTACION.csproj.GenerateResource.cache
+C:\Users\Lautaro\Documents\GitHub\CATALOGO-NET\CATALOGO\PRESENTACION\obj\Debug\PRESENTACION.csproj.CoreCompileInputs.cache
+C:\Users\Lautaro\Documents\GitHub\CATALOGO-NET\CATALOGO\PRESENTACION\bin\Debug\PRESENTACION.exe.config
+C:\Users\Lautaro\Documents\GitHub\CATALOGO-NET\CATALOGO\PRESENTACION\bin\Debug\PRESENTACION.exe
+C:\Users\Lautaro\Documents\GitHub\CATALOGO-NET\CATALOGO\PRESENTACION\bin\Debug\PRESENTACION.pdb
+C:\Users\Lautaro\Documents\GitHub\CATALOGO-NET\CATALOGO\PRESENTACION\bin\Debug\DOMINIO.dll
+C:\Users\Lautaro\Documents\GitHub\CATALOGO-NET\CATALOGO\PRESENTACION\bin\Debug\NEGOCIO.dll
+C:\Users\Lautaro\Documents\GitHub\CATALOGO-NET\CATALOGO\PRESENTACION\bin\Debug\DOMINIO.pdb
+C:\Users\Lautaro\Documents\GitHub\CATALOGO-NET\CATALOGO\PRESENTACION\bin\Debug\NEGOCIO.pdb
+C:\Users\Lautaro\Documents\GitHub\CATALOGO-NET\CATALOGO\PRESENTACION\obj\Debug\PRESENTACION.csproj.CopyComplete
+C:\Users\Lautaro\Documents\GitHub\CATALOGO-NET\CATALOGO\PRESENTACION\obj\Debug\PRESENTACION.exe
+C:\Users\Lautaro\Documents\GitHub\CATALOGO-NET\CATALOGO\PRESENTACION\obj\Debug\PRESENTACION.pdb
