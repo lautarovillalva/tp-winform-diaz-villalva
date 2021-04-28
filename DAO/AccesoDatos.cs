@@ -10,8 +10,7 @@ namespace DAO
 {
     class AccesoDatos
     {
-
-        String rutaDB = "Data Source=.\\sqlexpress;Initial Catalog=CATALOGO_DB;Integrated Security=True";
+        readonly String rutaDB = "Data Source=.\\sqlexpress;Initial Catalog=CATALOGO_DB;Integrated Security=True";
 
         public AccesoDatos() { }
 
@@ -28,6 +27,7 @@ namespace DAO
 
             catch(Exception ex)
             {
+                
                 return null;
             }
 

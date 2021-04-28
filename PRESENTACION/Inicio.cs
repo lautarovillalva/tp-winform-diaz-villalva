@@ -12,9 +12,9 @@ using DOMINIO;
 
 namespace PRESENTACION
 {
-    public partial class Form1 : Form
+    public partial class frmInicio : Form
     {
-        public Form1()
+        public frmInicio()
         {
             InitializeComponent();
         }
@@ -23,6 +23,8 @@ namespace PRESENTACION
         {
             Articulos_neg aux = new Articulos_neg();
             dgvArticulos.DataSource = aux.listaArticulos();
+            dgvArticulos.Columns["UrlImagen"].Visible = false;
+            dgvArticulos.Columns["Descripcion"].Visible = false;
             RecargarImg(aux.listaArticulos()[0].UrlImagen);
         }
 
@@ -36,6 +38,13 @@ namespace PRESENTACION
         {
             Articulo seleccionado = (Articulo)dgvArticulos.CurrentRow.DataBoundItem;
             RecargarImg(seleccionado.UrlImagen);
+        }
+
+        private void btnDetalle_Click(object sender, EventArgs e)
+        {
+            Articulo seleccionado = (Articulo)dgvArticulos.CurrentRow.DataBoundItem;
+            MessageBox.Show(seleccionado.Descripcion);
+
         }
     }
 }

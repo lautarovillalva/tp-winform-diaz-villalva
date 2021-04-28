@@ -12,3 +12,17 @@ C:\Users\Tomas\Desktop\Programacion3_tp\CATALOGO-NET\CATALOGO\NEGOCIO\obj\Debug\
 C:\Users\Tomas\Desktop\Programacion3_tp\CATALOGO-NET\CATALOGO\NEGOCIO\obj\Debug\netstandard2.0\NEGOCIO.csproj.CopyComplete
 C:\Users\Tomas\Desktop\Programacion3_tp\CATALOGO-NET\CATALOGO\NEGOCIO\obj\Debug\netstandard2.0\NEGOCIO.dll
 C:\Users\Tomas\Desktop\Programacion3_tp\CATALOGO-NET\CATALOGO\NEGOCIO\obj\Debug\netstandard2.0\NEGOCIO.pdb
+C:\Users\Lautaro\Documents\GitHub\CATALOGO-NET\NEGOCIO\bin\Debug\netstandard2.0\NEGOCIO.deps.json
+C:\Users\Lautaro\Documents\GitHub\CATALOGO-NET\NEGOCIO\bin\Debug\netstandard2.0\NEGOCIO.dll
+C:\Users\Lautaro\Documents\GitHub\CATALOGO-NET\NEGOCIO\bin\Debug\netstandard2.0\NEGOCIO.pdb
+C:\Users\Lautaro\Documents\GitHub\CATALOGO-NET\NEGOCIO\bin\Debug\netstandard2.0\DAO.dll
+C:\Users\Lautaro\Documents\GitHub\CATALOGO-NET\NEGOCIO\bin\Debug\netstandard2.0\DOMINIO.dll
+C:\Users\Lautaro\Documents\GitHub\CATALOGO-NET\NEGOCIO\bin\Debug\netstandard2.0\DAO.pdb
+C:\Users\Lautaro\Documents\GitHub\CATALOGO-NET\NEGOCIO\bin\Debug\netstandard2.0\DOMINIO.pdb
+C:\Users\Lautaro\Documents\GitHub\CATALOGO-NET\NEGOCIO\obj\Debug\netstandard2.0\NEGOCIO.csprojAssemblyReference.cache
+C:\Users\Lautaro\Documents\GitHub\CATALOGO-NET\NEGOCIO\obj\Debug\netstandard2.0\NEGOCIO.AssemblyInfoInputs.cache
+C:\Users\Lautaro\Documents\GitHub\CATALOGO-NET\NEGOCIO\obj\Debug\netstandard2.0\NEGOCIO.AssemblyInfo.cs
+C:\Users\Lautaro\Documents\GitHub\CATALOGO-NET\NEGOCIO\obj\Debug\netstandard2.0\NEGOCIO.csproj.CoreCompileInputs.cache
+C:\Users\Lautaro\Documents\GitHub\CATALOGO-NET\NEGOCIO\obj\Debug\netstandard2.0\NEGOCIO.csproj.CopyComplete
+C:\Users\Lautaro\Documents\GitHub\CATALOGO-NET\NEGOCIO\obj\Debug\netstandard2.0\NEGOCIO.dll
+C:\Users\Lautaro\Documents\GitHub\CATALOGO-NET\NEGOCIO\obj\Debug\netstandard2.0\NEGOCIO.pdb
