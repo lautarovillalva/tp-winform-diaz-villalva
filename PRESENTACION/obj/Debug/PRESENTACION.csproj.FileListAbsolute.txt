@@ -32,3 +32,4 @@ C:\Users\Lautaro\Documents\GitHub\CATALOGO-NET\PRESENTACION\obj\Debug\PRESENTACI
 C:\Users\Lautaro\Documents\GitHub\CATALOGO-NET\PRESENTACION\obj\Debug\PRESENTACION.exe
 C:\Users\Lautaro\Documents\GitHub\CATALOGO-NET\PRESENTACION\obj\Debug\PRESENTACION.pdb
 C:\Users\Lautaro\Documents\GitHub\CATALOGO-NET\PRESENTACION\obj\Debug\PRESENTACION.frmInicio.resources
+C:\Users\Lautaro\Documents\GitHub\CATALOGO-NET\PRESENTACION\obj\Debug\PRESENTACION.frmAgregar.resources
