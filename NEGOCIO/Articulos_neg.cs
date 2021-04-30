@@ -17,5 +17,24 @@ namespace NEGOCIO
             return aux.getArticulos();
         }
 
+        public List<Articulo> listaArticulosFiltrados(string valor)
+        {
+            Articulos_dao aux = new Articulos_dao();
+            return aux.getArticulosFiltrados(valor);
+        }
+
+
+        public bool agregarNuevoArticulo(Articulo articulo)
+        {
+
+            Articulos_dao aux = new Articulos_dao();
+            return aux.setArticulo(articulo);
+
+        }
+
+
+       
+
+
     }
 }

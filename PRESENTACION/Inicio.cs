@@ -21,12 +21,12 @@ namespace PRESENTACION
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            Articulos_neg aux = new Articulos_neg();
-            dgvArticulos.DataSource = aux.listaArticulos();
-            dgvArticulos.Columns["UrlImagen"].Visible = false;
-            dgvArticulos.Columns["Descripcion"].Visible = false;
-            RecargarImg(aux.listaArticulos()[0].UrlImagen);
+
+            cargarArticulos();
+
         }
+
+
 
 
         private void RecargarImg(string img)
@@ -46,5 +46,40 @@ namespace PRESENTACION
             MessageBox.Show(seleccionado.Descripcion);
 
         }
+
+        private void btnAgregar_Click(object sender, EventArgs e)
+        {
+            frmAgregar form = new frmAgregar();
+            form.Show();
+        }
+
+        private void tbxFiltro_TextChanged(object sender, EventArgs e)
+        {
+            string texto = "";
+            texto = tbxFiltro.Text;
+
+            if(texto != "")
+            {
+                Articulos_neg aux = new Articulos_neg();
+                dgvArticulos.DataSource = aux.listaArticulosFiltrados(texto);
+            }
+
+            else
+            {
+                cargarArticulos();
+            }
+           
+        }
+
+
+        private void cargarArticulos()
+        {
+            Articulos_neg aux = new Articulos_neg();
+            dgvArticulos.DataSource = aux.listaArticulos();
+            dgvArticulos.Columns["UrlImagen"].Visible = false;
+            dgvArticulos.Columns["Descripcion"].Visible = false;
+            RecargarImg(aux.listaArticulos()[0].UrlImagen);
+        }
+
     }
 }

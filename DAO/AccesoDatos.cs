@@ -8,7 +8,7 @@ using System.Data;
 
 namespace DAO
 {
-    class AccesoDatos
+     class AccesoDatos
     {
         readonly String rutaDB = "Data Source=.\\sqlexpress;Initial Catalog=CATALOGO_DB;Integrated Security=True";
 
@@ -56,6 +56,23 @@ namespace DAO
             adp.Fill(ds, NombreTabla);
             Conexion.Close();
             return ds.Tables[NombreTabla];
+        }
+
+
+        //Con esta funcion podes realizar cualquier consulta cotra la base de dato sea insert, delete o modificar. 
+        // Te devuelve la cantida de filas afectadas.
+        public int ejecutarConsulta(string consulta)
+        {
+            SqlCommand cmd = new SqlCommand();
+            SqlConnection Conexion = ObtenerConexion();
+            cmd.Connection = Conexion;
+
+            cmd.CommandText = consulta;
+            cmd.CommandType = CommandType.Text;
+            int filas = cmd.ExecuteNonQuery();
+
+            Conexion.Close();
+            return filas;
         }
 
 

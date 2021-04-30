@@ -16,3 +16,12 @@ C:\Users\Lautaro\Documents\GitHub\CATALOGO-NET\DOMINIO\obj\Debug\netstandard2.0\
 C:\Users\Lautaro\Documents\GitHub\CATALOGO-NET\DOMINIO\obj\Debug\netstandard2.0\DOMINIO.csproj.CoreCompileInputs.cache
 C:\Users\Lautaro\Documents\GitHub\CATALOGO-NET\DOMINIO\obj\Debug\netstandard2.0\DOMINIO.dll
 C:\Users\Lautaro\Documents\GitHub\CATALOGO-NET\DOMINIO\obj\Debug\netstandard2.0\DOMINIO.pdb
+C:\Users\Tomas\Desktop\Catalogo\CATALOGO-NET\DOMINIO\bin\Debug\netstandard2.0\DOMINIO.deps.json
+C:\Users\Tomas\Desktop\Catalogo\CATALOGO-NET\DOMINIO\bin\Debug\netstandard2.0\DOMINIO.dll
+C:\Users\Tomas\Desktop\Catalogo\CATALOGO-NET\DOMINIO\bin\Debug\netstandard2.0\DOMINIO.pdb
+C:\Users\Tomas\Desktop\Catalogo\CATALOGO-NET\DOMINIO\obj\Debug\netstandard2.0\DOMINIO.csprojAssemblyReference.cache
+C:\Users\Tomas\Desktop\Catalogo\CATALOGO-NET\DOMINIO\obj\Debug\netstandard2.0\DOMINIO.AssemblyInfoInputs.cache
+C:\Users\Tomas\Desktop\Catalogo\CATALOGO-NET\DOMINIO\obj\Debug\netstandard2.0\DOMINIO.AssemblyInfo.cs
+C:\Users\Tomas\Desktop\Catalogo\CATALOGO-NET\DOMINIO\obj\Debug\netstandard2.0\DOMINIO.csproj.CoreCompileInputs.cache
+C:\Users\Tomas\Desktop\Catalogo\CATALOGO-NET\DOMINIO\obj\Debug\netstandard2.0\DOMINIO.dll
+C:\Users\Tomas\Desktop\Catalogo\CATALOGO-NET\DOMINIO\obj\Debug\netstandard2.0\DOMINIO.pdb

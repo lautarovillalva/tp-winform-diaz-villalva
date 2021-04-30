@@ -6,6 +6,7 @@ namespace DOMINIO
 {
     public class Marca
     {
+        public int Id { get; set; }
         public string Nombre { get; set; }
 
 
@@ -13,6 +14,8 @@ namespace DOMINIO
         {
             this.Nombre = Nombre;
         }
+
+        public Marca() {}
 
         public override string ToString()
         {
