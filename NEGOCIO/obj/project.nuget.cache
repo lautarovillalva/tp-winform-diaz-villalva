@@ -1,11 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "46+tJkHkekJtjXy6Fl7btnF0CkE9TqcKao4RccGzgGjrF7cphtLQz1iw6ZsILXI92/sZpQXZypHbg5N43ajFYw==",
+  "dgSpecHash": "Xdk0CcxOkR8t9CPtMCY6+wJR8ZFDePXzff/VK0rKhLrDj28Jd2oKC3GDkmsBwuqtplBqna7c0FqVPK9ebSGeHg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Tomas\\Desktop\\Catalogo\\CATALOGO-NET\\NEGOCIO\\NEGOCIO.csproj",
+  "projectFilePath": "C:\\Users\\Lautaro\\Documents\\GitHub\\CATALOGO-NET\\NEGOCIO\\NEGOCIO.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\Tomas\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
-    "C:\\Users\\Tomas\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512"
+    "C:\\Users\\Lautaro\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
+    "C:\\Users\\Lautaro\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512"
   ],
   "logs": []
 }

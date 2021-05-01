@@ -61,7 +61,7 @@ namespace DAO
 
         //Con esta funcion podes realizar cualquier consulta cotra la base de dato sea insert, delete o modificar. 
         // Te devuelve la cantida de filas afectadas.
-        public int ejecutarConsulta(string consulta)
+        public int EjecutarConsulta(string consulta)
         {
             SqlCommand cmd = new SqlCommand();
             SqlConnection Conexion = ObtenerConexion();

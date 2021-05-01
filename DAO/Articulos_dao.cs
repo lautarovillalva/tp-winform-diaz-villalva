@@ -19,7 +19,7 @@ namespace DAO
 
             List<Articulo> lista = new List<Articulo>();
 
-            string consulta = "select a.Codigo, a.Nombre, a.Descripcion, m.Descripcion, c.Descripcion, a.ImagenUrl, a.Precio from ARTICULOS as a, MARCAS as m, CATEGORIAS as c  where a.IdMarca = m.Id and a.IdCategoria = c.Id";
+            string consulta = "select a.Id, a.Codigo, a.Nombre, a.Descripcion, m.Descripcion, c.Descripcion, a.ImagenUrl, a.Precio from ARTICULOS as a, MARCAS as m, CATEGORIAS as c  where a.IdMarca = m.Id and a.IdCategoria = c.Id";
 
             DataTable tabla = ds.ObtenerTabla("Articulos", consulta);
 
@@ -27,13 +27,14 @@ namespace DAO
             {
                 Articulo art = new Articulo
                 {
-                    Codigo = tabla.Rows[i][0].ToString(),
-                    Nombre = tabla.Rows[i][1].ToString(),
-                    Descripcion = tabla.Rows[i][2].ToString(),
-                    Marca = new Marca(tabla.Rows[i][3].ToString()),
-                    Categoria = new Categoria(tabla.Rows[i][4].ToString()),
-                    UrlImagen = tabla.Rows[i][5].ToString(),
-                    Precio = Convert.ToDouble(tabla.Rows[i][6])
+                    Id = Convert.ToInt32(tabla.Rows[i][0]), 
+                    Codigo = tabla.Rows[i][1].ToString(),
+                    Nombre = tabla.Rows[i][2].ToString(),
+                    Descripcion = tabla.Rows[i][3].ToString(),
+                    Marca = new Marca(tabla.Rows[i][4].ToString()),
+                    Categoria = new Categoria(tabla.Rows[i][5].ToString()),
+                    UrlImagen = tabla.Rows[i][6].ToString(),
+                    Precio = Convert.ToDouble(tabla.Rows[i][7])
                 };
 
                 lista.Add(art);
@@ -49,7 +50,7 @@ namespace DAO
 
             List<Articulo> lista = new List<Articulo>();
 
-            string consulta = "select a.Codigo, a.Nombre, a.Descripcion, m.Descripcion, c.Descripcion, a.ImagenUrl, a.Precio from ARTICULOS  as a , MARCAS as m, CATEGORIAS as c where a.IdMarca = m.Id and a.IdCategoria = c.Id and  Nombre like '%" + valor + "%'";
+            string consulta = "select a.Id, a.Codigo, a.Nombre, a.Descripcion, m.Descripcion, c.Descripcion, a.ImagenUrl, a.Precio from ARTICULOS  as a , MARCAS as m, CATEGORIAS as c where a.IdMarca = m.Id and a.IdCategoria = c.Id and  Nombre like '%" + valor + "%'";
 
             DataTable tabla = ds.ObtenerTabla("Articulos", consulta);
 
@@ -57,13 +58,14 @@ namespace DAO
             {
                 Articulo art = new Articulo
                 {
-                    Codigo = tabla.Rows[i][0].ToString(),
-                    Nombre = tabla.Rows[i][1].ToString(),
-                    Descripcion = tabla.Rows[i][2].ToString(),
-                    Marca = new Marca(tabla.Rows[i][3].ToString()),
-                    Categoria = new Categoria(tabla.Rows[i][4].ToString()),
-                    UrlImagen = tabla.Rows[i][5].ToString(),
-                    Precio = Convert.ToDouble(tabla.Rows[i][6])
+                    Id = Convert.ToInt32(tabla.Rows[i][0]),
+                    Codigo = tabla.Rows[i][1].ToString(),
+                    Nombre = tabla.Rows[i][2].ToString(),
+                    Descripcion = tabla.Rows[i][3].ToString(),
+                    Marca = new Marca(tabla.Rows[i][4].ToString()),
+                    Categoria = new Categoria(tabla.Rows[i][5].ToString()),
+                    UrlImagen = tabla.Rows[i][6].ToString(),
+                    Precio = Convert.ToDouble(tabla.Rows[i][7])
                 };
 
                 lista.Add(art);
@@ -76,7 +78,7 @@ namespace DAO
         public bool setArticulo(Articulo articulo)
         {
            string consulta = "insert into ARTICULOS (Codigo,Nombre,Descripcion,IdMarca,IdCategoria,ImagenUrl,Precio) values" + "('" + articulo.Codigo + "','" + articulo.Nombre + "','" + articulo.Descripcion + "','" + articulo.Categoria.Id + "','" + articulo.Categoria.Id + "','" + articulo.UrlImagen + "','" + articulo.Precio.ToString() + "')";
-           int filas = ds.ejecutarConsulta(consulta);
+           int filas = ds.EjecutarConsulta(consulta);
 
             if (filas > 0)
             {
@@ -85,7 +87,31 @@ namespace DAO
 
             return false;
         }
-       
+        public bool modArticulo(Articulo articulo)
+        {
+            string consulta = "update ARTICULOS set Codigo='"+articulo.Codigo+"', Nombre='"+articulo.Nombre+"', Descripcion='"+articulo.Descripcion+"', IdMarca='"+articulo.Marca.Id+"',IdCategoria='"+articulo.Categoria.Id+"', ImagenUrl='"+articulo.UrlImagen+ "', Precio='" + articulo.Precio.ToString() + "' where Id='"+articulo.Id+"'";
+            int filas = ds.EjecutarConsulta(consulta);
+
+            if (filas > 0)
+            {
+                return true;
+            }
+
+            return false;
+        }
+        public bool delArticulo(Articulo articulo)
+        {
+            string consulta = "delete from ARTICULOS where Id="+articulo.Id+"";
+            int filas = ds.EjecutarConsulta(consulta);
+
+            if (filas > 0)
+            {
+                return true;
+            }
+
+            return false;
+        }
+
 
     }
 }

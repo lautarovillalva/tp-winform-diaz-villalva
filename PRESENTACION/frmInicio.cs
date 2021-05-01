@@ -49,8 +49,9 @@ namespace PRESENTACION
 
         private void btnAgregar_Click(object sender, EventArgs e)
         {
-            frmAgregar form = new frmAgregar();
-            form.Show();
+            frmArticulo form = new frmArticulo();
+            form.ShowDialog();
+            cargarArticulos();
         }
 
         private void tbxFiltro_TextChanged(object sender, EventArgs e)
@@ -81,5 +82,33 @@ namespace PRESENTACION
             RecargarImg(aux.listaArticulos()[0].UrlImagen);
         }
 
+        private void btnModificar_Click(object sender, EventArgs e)
+        {
+            Articulo seleccionado = (Articulo)dgvArticulos.CurrentRow.DataBoundItem;
+            frmArticulo modificar = new frmArticulo(seleccionado);
+            modificar.ShowDialog();
+            cargarArticulos();
+
+        }
+
+        private void btnEliminar_Click(object sender, EventArgs e)
+        {
+            Articulo seleccionado = (Articulo)dgvArticulos.CurrentRow.DataBoundItem;
+            Articulos_neg articulos_Neg = new Articulos_neg();
+            try
+            {
+                if (MessageBox.Show("Estás seguro que deseas elminar el artículo?", "Eliminado!", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                {
+                    articulos_Neg.eliminarArticulo(seleccionado);
+                }
+                cargarArticulos();
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show(ex.ToString());
+            }
+
+        }
     }
 }

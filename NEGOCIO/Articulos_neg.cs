@@ -32,8 +32,20 @@ namespace NEGOCIO
 
         }
 
+        public bool modificarArticulo(Articulo articulo)
+        {
 
-       
+            Articulos_dao aux = new Articulos_dao();
+            return aux.modArticulo(articulo);
+
+        }
+        public bool eliminarArticulo(Articulo articulo)
+        {
+
+            Articulos_dao aux = new Articulos_dao();
+            return aux.delArticulo(articulo);
+
+        }
 
 
     }
