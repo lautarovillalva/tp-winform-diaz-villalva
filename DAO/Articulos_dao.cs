@@ -50,7 +50,7 @@ namespace DAO
 
             List<Articulo> lista = new List<Articulo>();
 
-            string consulta = "select a.Id, a.Codigo, a.Nombre, a.Descripcion, m.Descripcion, c.Descripcion, a.ImagenUrl, a.Precio from ARTICULOS  as a , MARCAS as m, CATEGORIAS as c where a.IdMarca = m.Id and a.IdCategoria = c.Id and  Nombre like '%" + valor + "%'";
+            string consulta = "select distinct a.Id, a.Codigo, a.Nombre, a.Descripcion, m.Descripcion, c.Descripcion, a.ImagenUrl, a.Precio from ARTICULOS  as a , MARCAS as m, CATEGORIAS as c where a.IdMarca = m.Id and a.IdCategoria = c.Id and  (Nombre like '%" + valor + "%' or c.Descripcion like '%" + valor + "%'  or m.Descripcion like '%" + valor + "%' or a.Codigo like '%" + valor + "%')";
 
             DataTable tabla = ds.ObtenerTabla("Articulos", consulta);
 
