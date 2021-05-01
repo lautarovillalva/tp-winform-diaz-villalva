@@ -31,7 +31,16 @@ namespace PRESENTACION
 
         private void RecargarImg(string img)
         {
-            pbxImg.Load(img);
+            try
+            {
+                pbxImg.Load(img);
+            }
+
+            
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+            }
         }
 
         private void dgvArticulos_MouseClick(object sender, MouseEventArgs e)
