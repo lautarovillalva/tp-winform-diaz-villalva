@@ -29,6 +29,7 @@ namespace PRESENTACION
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.lblCodigo = new System.Windows.Forms.Label();
             this.tbxCodigo = new System.Windows.Forms.TextBox();
             this.tbxNombre = new System.Windows.Forms.TextBox();
@@ -46,7 +47,9 @@ namespace PRESENTACION
             this.btnAceptar = new System.Windows.Forms.Button();
             this.btnCancelar = new System.Windows.Forms.Button();
             this.tbxUrlImagen = new System.Windows.Forms.TextBox();
+            this.Error = new System.Windows.Forms.ErrorProvider(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.pbxImagen)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Error)).BeginInit();
             this.SuspendLayout();
             // 
             // lblCodigo
@@ -143,6 +146,7 @@ namespace PRESENTACION
             this.tbxPrecio.Name = "tbxPrecio";
             this.tbxPrecio.Size = new System.Drawing.Size(301, 29);
             this.tbxPrecio.TabIndex = 11;
+            this.tbxPrecio.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbxPrecio_KeyPress);
             // 
             // lblPrecio
             // 
@@ -233,6 +237,10 @@ namespace PRESENTACION
             this.tbxUrlImagen.TabIndex = 19;
             this.tbxUrlImagen.TextChanged += new System.EventHandler(this.tbxUrlImagen_TextChanged);
             // 
+            // Error
+            // 
+            this.Error.ContainerControl = this;
+            // 
             // frmArticulo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -260,6 +268,7 @@ namespace PRESENTACION
             this.Text = "Agregar Artículo";
             this.Load += new System.EventHandler(this.frmAgregar_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pbxImagen)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Error)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -283,5 +292,6 @@ namespace PRESENTACION
         private System.Windows.Forms.Button btnAceptar;
         private System.Windows.Forms.Button btnCancelar;
         private System.Windows.Forms.TextBox tbxUrlImagen;
+        private System.Windows.Forms.ErrorProvider Error;
     }
 }

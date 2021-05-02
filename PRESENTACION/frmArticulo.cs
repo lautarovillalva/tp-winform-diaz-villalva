@@ -27,12 +27,13 @@ namespace PRESENTACION
             this.Articulo = articulo;
             Text = "Modificar Artículo";
         }
-
         private void frmAgregar_Load(object sender, EventArgs e)
         {
+         
             //cargar cbxMarca y cbxCategoria
             try
             {
+                
                 cargarCombosBox();
 
 
@@ -85,15 +86,76 @@ namespace PRESENTACION
             Close();
         }
 
+        private bool validarCampos()
+        {
+            bool validar = true;
+            if(tbxCodigo.Text=="")
+            {
+                validar = false;
+                Error.SetError(tbxCodigo,"Ingresar un código.");
+            }
+            if (tbxNombre.Text == "")
+            {
+                validar = false;
+                Error.SetError(tbxNombre, "Ingresar un nombre.");
+            }
+            if (tbxPrecio.Text == "")
+            {
+                validar = false;
+                Error.SetError(tbxPrecio, "Ingresar un precio.");
+            }
+            if (tbxDescripcion.Text == "")
+            {
+                validar = false;
+                Error.SetError(tbxDescripcion, "Ingresar un descripción.");
+            }
+            if (tbxUrlImagen.Text == "")
+            {
+                validar = false;
+                Error.SetError(tbxUrlImagen, "Ingresar un UrlImagen.");
+            }
+            if(cbxMarca.SelectedItem==null)
+            {
+                validar = false;
+                Error.SetError(cbxMarca, "Seleccionar marca.");
+            }
+            if (cbxCategoria.SelectedItem == null)
+            {
+                validar = false;
+                Error.SetError(cbxCategoria, "Seleccionar categoría.");
+            }
+
+            return validar;
+        }
+        private void borrarErrores()
+        {
+            Error.SetError(tbxCodigo ,"");
+            Error.SetError(tbxNombre ,"");
+            Error.SetError(tbxDescripcion ,"");
+            Error.SetError(tbxPrecio ,"");
+            Error.SetError(tbxUrlImagen ,"");
+            Error.SetError(cbxCategoria ,"");
+            Error.SetError(cbxMarca ,"");
+        }
         private void btnAceptar_Click(object sender, EventArgs e)
         {
-            if (Articulo == null)
-            { 
-                agregar(); 
+            borrarErrores();
+            if(validarCampos())
+            {
+
+                if (Articulo == null)
+                { 
+                    agregar(); 
+                }
+                else
+                {
+                    modificar();
+                }
+
             }
             else
             {
-                modificar();
+                MessageBox.Show("Completar campos.");
             }
               
         }
@@ -200,8 +262,18 @@ namespace PRESENTACION
             }
         }
 
-      
+        private void tbxPrecio_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && (e.KeyChar != '.'))
+            {
+                e.Handled = true;
+            }
 
-
+            // solo 1 punto decimal
+            if ((e.KeyChar == '.') && ((sender as TextBox).Text.IndexOf('.') > -1))
+            {
+                e.Handled = true;
+            }
+        }
     }
 }
