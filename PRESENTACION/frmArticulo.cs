@@ -107,7 +107,7 @@ namespace PRESENTACION
             if (tbxDescripcion.Text == "")
             {
                 validar = false;
-                Error.SetError(tbxDescripcion, "Ingresar un descripción.");
+                Error.SetError(tbxDescripcion, "Ingresar una descripción.");
             }
             if (tbxUrlImagen.Text == "")
             {
@@ -223,8 +223,7 @@ namespace PRESENTACION
 
             try
             {
-                //Articulo articulo = new Articulo
-                //{
+                
                 Articulo.Codigo = tbxCodigo.Text;
                 Articulo.Nombre = tbxNombre.Text;
                 Articulo.Descripcion = tbxDescripcion.Text;
@@ -232,7 +231,7 @@ namespace PRESENTACION
                 Articulo.Categoria = (Categoria)cbxCategoria.SelectedItem;
                 Articulo.UrlImagen = tbxUrlImagen.Text;
                 Articulo.Precio = Convert.ToDouble(tbxPrecio.Text);
-                //};
+                
 
                 if (art.modificarArticulo(Articulo))
                 {
@@ -269,7 +268,7 @@ namespace PRESENTACION
                 e.Handled = true;
             }
 
-            // solo 1 punto decimal
+            
             if ((e.KeyChar == '.') && ((sender as TextBox).Text.IndexOf('.') > -1))
             {
                 e.Handled = true;
