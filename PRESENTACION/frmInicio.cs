@@ -87,6 +87,7 @@ namespace PRESENTACION
             Articulos_neg aux = new Articulos_neg();
             dgvArticulos.DataSource = aux.listaArticulos();
             dgvArticulos.Columns["UrlImagen"].Visible = false;
+            dgvArticulos.Columns["Id"].Visible = false;
             dgvArticulos.Columns["Descripcion"].Visible = false;
             RecargarImg(aux.listaArticulos()[0].UrlImagen);
         }
