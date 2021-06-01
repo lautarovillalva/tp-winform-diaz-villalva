@@ -1,0 +1,71 @@
+﻿body {
+    padding: 0px !important;
+}
+
+.navbar-brand img {
+    width: 200px;
+}
+
+.navbar {
+    background: #131921 !important;
+}
+
+
+    .navbar a {
+        color: #fff !important;
+        transition: 0.5s;
+        font-weight: 600;
+    }
+
+        .navbar a:hover {
+            color: #ff9b00 !important;
+        }
+
+footer {
+    background: #131921;
+    color: #fff;
+    padding: 8px;
+    text-align: center;
+    padding-top: 20px;
+}
+
+.productos {
+    margin-top: 50px;
+}
+
+    .productos .card {
+        transition: 1s;
+        cursor: pointer;
+    }
+
+        .productos .card:hover {
+            transform: scale3d(1.1, 1.1, 0.3);
+            z-index: 3;
+            box-shadow: 2px 2px 20px 10px rgba(0, 0, 0, 0.2);
+        }
+
+
+    .productos .precio {
+        display: flex;
+        justify-content: space-between;
+        padding: 10px;
+        background: #131921;
+        border-bottom-left-radius: 10px;
+        border-bottom-right-radius: 10px;
+    }
+
+        .productos .precio h4 {
+            color: #fff;
+            margin-top: 5px;
+            margin-left: 10px
+        }
+
+    .productos .card, .productos .card img {
+        border-radius: 10px !important;
+    }
+
+        .productos .card h5 {
+            font-weight: 600;
+            border-bottom: solid 1px #dfdfdf;
+            padding-bottom: 10px;
+        }

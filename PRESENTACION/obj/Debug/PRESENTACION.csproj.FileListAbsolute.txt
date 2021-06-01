@@ -42,7 +42,6 @@ C:\Users\Tomas\Desktop\Catalogo\CATALOGO-NET\PRESENTACION\bin\Debug\DOMINIO.pdb
 C:\Users\Tomas\Desktop\Catalogo\CATALOGO-NET\PRESENTACION\bin\Debug\NEGOCIO.pdb
 C:\Users\Tomas\Desktop\Catalogo\CATALOGO-NET\PRESENTACION\bin\Debug\DAO.pdb
 C:\Users\Tomas\Desktop\Catalogo\CATALOGO-NET\PRESENTACION\obj\Debug\PRESENTACION.csprojAssemblyReference.cache
-C:\Users\Tomas\Desktop\Catalogo\CATALOGO-NET\PRESENTACION\obj\Debug\PRESENTACION.frmAgregar.resources
 C:\Users\Tomas\Desktop\Catalogo\CATALOGO-NET\PRESENTACION\obj\Debug\PRESENTACION.frmInicio.resources
 C:\Users\Tomas\Desktop\Catalogo\CATALOGO-NET\PRESENTACION\obj\Debug\PRESENTACION.Properties.Resources.resources
 C:\Users\Tomas\Desktop\Catalogo\CATALOGO-NET\PRESENTACION\obj\Debug\PRESENTACION.csproj.GenerateResource.cache
@@ -51,3 +50,4 @@ C:\Users\Tomas\Desktop\Catalogo\CATALOGO-NET\PRESENTACION\obj\Debug\PRESENTACION
 C:\Users\Tomas\Desktop\Catalogo\CATALOGO-NET\PRESENTACION\obj\Debug\PRESENTACION.exe
 C:\Users\Tomas\Desktop\Catalogo\CATALOGO-NET\PRESENTACION\obj\Debug\PRESENTACION.pdb
 C:\Users\Lautaro\Documents\GitHub\CATALOGO-NET\PRESENTACION\obj\Debug\PRESENTACION.frmArticulo.resources
+C:\Users\Tomas\Desktop\Catalogo\CATALOGO-NET\PRESENTACION\obj\Debug\PRESENTACION.frmArticulo.resources
