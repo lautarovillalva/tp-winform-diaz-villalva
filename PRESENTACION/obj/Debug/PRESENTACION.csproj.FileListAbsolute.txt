@@ -69,3 +69,21 @@ C:\Users\Tomas\Desktop\Prog3-2021\Actividad_3 Catalogo\CATALOGO-NET\PRESENTACION
 C:\Users\Tomas\Desktop\Prog3-2021\Actividad_3 Catalogo\CATALOGO-NET\PRESENTACION\obj\Debug\PRESENTACION.csproj.CopyComplete
 C:\Users\Tomas\Desktop\Prog3-2021\Actividad_3 Catalogo\CATALOGO-NET\PRESENTACION\obj\Debug\PRESENTACION.exe
 C:\Users\Tomas\Desktop\Prog3-2021\Actividad_3 Catalogo\CATALOGO-NET\PRESENTACION\obj\Debug\PRESENTACION.pdb
+C:\Users\Lautaro\GitHub\tp-winform-diaz-villalva\PRESENTACION\bin\Debug\PRESENTACION.exe.config
+C:\Users\Lautaro\GitHub\tp-winform-diaz-villalva\PRESENTACION\bin\Debug\PRESENTACION.exe
+C:\Users\Lautaro\GitHub\tp-winform-diaz-villalva\PRESENTACION\bin\Debug\PRESENTACION.pdb
+C:\Users\Lautaro\GitHub\tp-winform-diaz-villalva\PRESENTACION\bin\Debug\DOMINIO.dll
+C:\Users\Lautaro\GitHub\tp-winform-diaz-villalva\PRESENTACION\bin\Debug\NEGOCIO.dll
+C:\Users\Lautaro\GitHub\tp-winform-diaz-villalva\PRESENTACION\bin\Debug\DAO.dll
+C:\Users\Lautaro\GitHub\tp-winform-diaz-villalva\PRESENTACION\bin\Debug\DOMINIO.pdb
+C:\Users\Lautaro\GitHub\tp-winform-diaz-villalva\PRESENTACION\bin\Debug\NEGOCIO.pdb
+C:\Users\Lautaro\GitHub\tp-winform-diaz-villalva\PRESENTACION\bin\Debug\DAO.pdb
+C:\Users\Lautaro\GitHub\tp-winform-diaz-villalva\PRESENTACION\obj\Debug\PRESENTACION.csprojAssemblyReference.cache
+C:\Users\Lautaro\GitHub\tp-winform-diaz-villalva\PRESENTACION\obj\Debug\PRESENTACION.frmArticulo.resources
+C:\Users\Lautaro\GitHub\tp-winform-diaz-villalva\PRESENTACION\obj\Debug\PRESENTACION.frmInicio.resources
+C:\Users\Lautaro\GitHub\tp-winform-diaz-villalva\PRESENTACION\obj\Debug\PRESENTACION.Properties.Resources.resources
+C:\Users\Lautaro\GitHub\tp-winform-diaz-villalva\PRESENTACION\obj\Debug\PRESENTACION.csproj.GenerateResource.cache
+C:\Users\Lautaro\GitHub\tp-winform-diaz-villalva\PRESENTACION\obj\Debug\PRESENTACION.csproj.CoreCompileInputs.cache
+C:\Users\Lautaro\GitHub\tp-winform-diaz-villalva\PRESENTACION\obj\Debug\PRESENTACION.csproj.CopyComplete
+C:\Users\Lautaro\GitHub\tp-winform-diaz-villalva\PRESENTACION\obj\Debug\PRESENTACION.exe
+C:\Users\Lautaro\GitHub\tp-winform-diaz-villalva\PRESENTACION\obj\Debug\PRESENTACION.pdb

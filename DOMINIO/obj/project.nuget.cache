@@ -1,11 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "fqtmTr4pOJdbUhMb14tjWpy1tuOBuMpX3UlEGReT3iKbkqyMlsj3I57euLKh2uJR5uUyTrzGXArmfRLyJKNiMg==",
+  "dgSpecHash": "A/agKD2N6/C2YmZtgoDU5kN3enAWmBfdIoq/YOGXR4EAkpX1gjhh1/xZfeLuRJjziZyF8yr8HamNqxYGNXj6Nw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Tomas\\Desktop\\Prog3-2021\\Actividad_3 Catalogo\\CATALOGO-NET\\DOMINIO\\DOMINIO.csproj",
+  "projectFilePath": "C:\\Users\\Lautaro\\GitHub\\tp-winform-diaz-villalva\\DOMINIO\\DOMINIO.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\Tomas\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
-    "C:\\Users\\Tomas\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512"
+    "C:\\Users\\Lautaro\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
+    "C:\\Users\\Lautaro\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512"
   ],
   "logs": []
 }

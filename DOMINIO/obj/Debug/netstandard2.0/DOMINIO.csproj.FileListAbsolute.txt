@@ -25,3 +25,11 @@ C:\Users\Tomas\Desktop\Catalogo\CATALOGO-NET\DOMINIO\obj\Debug\netstandard2.0\DO
 C:\Users\Tomas\Desktop\Catalogo\CATALOGO-NET\DOMINIO\obj\Debug\netstandard2.0\DOMINIO.csproj.CoreCompileInputs.cache
 C:\Users\Tomas\Desktop\Catalogo\CATALOGO-NET\DOMINIO\obj\Debug\netstandard2.0\DOMINIO.dll
 C:\Users\Tomas\Desktop\Catalogo\CATALOGO-NET\DOMINIO\obj\Debug\netstandard2.0\DOMINIO.pdb
+C:\Users\Lautaro\GitHub\tp-winform-diaz-villalva\DOMINIO\bin\Debug\netstandard2.0\DOMINIO.deps.json
+C:\Users\Lautaro\GitHub\tp-winform-diaz-villalva\DOMINIO\bin\Debug\netstandard2.0\DOMINIO.dll
+C:\Users\Lautaro\GitHub\tp-winform-diaz-villalva\DOMINIO\bin\Debug\netstandard2.0\DOMINIO.pdb
+C:\Users\Lautaro\GitHub\tp-winform-diaz-villalva\DOMINIO\obj\Debug\netstandard2.0\DOMINIO.AssemblyInfoInputs.cache
+C:\Users\Lautaro\GitHub\tp-winform-diaz-villalva\DOMINIO\obj\Debug\netstandard2.0\DOMINIO.AssemblyInfo.cs
+C:\Users\Lautaro\GitHub\tp-winform-diaz-villalva\DOMINIO\obj\Debug\netstandard2.0\DOMINIO.csproj.CoreCompileInputs.cache
+C:\Users\Lautaro\GitHub\tp-winform-diaz-villalva\DOMINIO\obj\Debug\netstandard2.0\DOMINIO.dll
+C:\Users\Lautaro\GitHub\tp-winform-diaz-villalva\DOMINIO\obj\Debug\netstandard2.0\DOMINIO.pdb
