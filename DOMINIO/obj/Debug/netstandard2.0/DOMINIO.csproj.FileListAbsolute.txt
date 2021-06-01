@@ -33,3 +33,4 @@ C:\Users\Lautaro\GitHub\tp-winform-diaz-villalva\DOMINIO\obj\Debug\netstandard2.
 C:\Users\Lautaro\GitHub\tp-winform-diaz-villalva\DOMINIO\obj\Debug\netstandard2.0\DOMINIO.csproj.CoreCompileInputs.cache
 C:\Users\Lautaro\GitHub\tp-winform-diaz-villalva\DOMINIO\obj\Debug\netstandard2.0\DOMINIO.dll
 C:\Users\Lautaro\GitHub\tp-winform-diaz-villalva\DOMINIO\obj\Debug\netstandard2.0\DOMINIO.pdb
+C:\Users\Lautaro\GitHub\tp-winform-diaz-villalva\DOMINIO\obj\Debug\netstandard2.0\DOMINIO.csprojAssemblyReference.cache

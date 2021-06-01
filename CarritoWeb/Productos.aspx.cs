@@ -18,7 +18,6 @@ namespace CarritoWeb
             Articulos_neg neg = new Articulos_neg();
             this.lista = neg.listaArticulos();
 
-            Session.Add("listaArt", lista);
         }
     }
 }

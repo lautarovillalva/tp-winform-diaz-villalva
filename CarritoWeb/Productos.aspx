@@ -11,7 +11,7 @@
             <img src="<%: item.UrlImagen %>" class="card-img-top" alt="...">
             <div class="card-body">
                 <h5 class="card-title"><%: item.Nombre %></h5>
-                <p class="card-text"><%: item.Descripcion %></p>
+                <p class="card-text"><%: item.Codigo %></p>
             </div>
 
             <div class="precio">
@@ -19,9 +19,9 @@
 
                 <%--<button type="button" class="btn btn-outline-warning">Sumar al carrito <i class="fas fa-cart-plus"></i></button>--%>
                 <%--<asp:Button ID="btnAgregar" OnClick="btnAgregar_Click" class="btn btn-outline-warning" Text="Sumar al carrito" runat="server" />--%>
-                <a href="Carrito.aspx?id=<%:item.Id%>">Agregar al Carrito</a>
+                <a href="Detalles.aspx?id=<%:item.Id%>">Ver detalles</a>
                 
-                <i class="fas fa-cart-plus"></i>
+                <%--<i class="fas fa-cart-plus"></i>--%>
             </div>
         </div>
 
