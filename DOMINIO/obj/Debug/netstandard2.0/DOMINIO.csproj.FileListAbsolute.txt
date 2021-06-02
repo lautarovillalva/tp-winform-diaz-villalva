@@ -33,6 +33,7 @@ C:\Users\Lautaro\GitHub\tp-winform-diaz-villalva\DOMINIO\obj\Debug\netstandard2.
 C:\Users\Lautaro\GitHub\tp-winform-diaz-villalva\DOMINIO\obj\Debug\netstandard2.0\DOMINIO.csproj.CoreCompileInputs.cache
 C:\Users\Lautaro\GitHub\tp-winform-diaz-villalva\DOMINIO\obj\Debug\netstandard2.0\DOMINIO.dll
 C:\Users\Lautaro\GitHub\tp-winform-diaz-villalva\DOMINIO\obj\Debug\netstandard2.0\DOMINIO.pdb
+<<<<<<< HEAD
 C:\Users\Tomas\Desktop\catalogoWeb\tp-winform-diaz-villalva\DOMINIO\bin\Debug\netstandard2.0\DOMINIO.deps.json
 C:\Users\Tomas\Desktop\catalogoWeb\tp-winform-diaz-villalva\DOMINIO\bin\Debug\netstandard2.0\DOMINIO.dll
 C:\Users\Tomas\Desktop\catalogoWeb\tp-winform-diaz-villalva\DOMINIO\bin\Debug\netstandard2.0\DOMINIO.pdb
@@ -42,3 +43,6 @@ C:\Users\Tomas\Desktop\catalogoWeb\tp-winform-diaz-villalva\DOMINIO\obj\Debug\ne
 C:\Users\Tomas\Desktop\catalogoWeb\tp-winform-diaz-villalva\DOMINIO\obj\Debug\netstandard2.0\DOMINIO.csproj.CoreCompileInputs.cache
 C:\Users\Tomas\Desktop\catalogoWeb\tp-winform-diaz-villalva\DOMINIO\obj\Debug\netstandard2.0\DOMINIO.dll
 C:\Users\Tomas\Desktop\catalogoWeb\tp-winform-diaz-villalva\DOMINIO\obj\Debug\netstandard2.0\DOMINIO.pdb
+=======
+C:\Users\Lautaro\GitHub\tp-winform-diaz-villalva\DOMINIO\obj\Debug\netstandard2.0\DOMINIO.csprojAssemblyReference.cache
+>>>>>>> dba2a6a7edf660a5cfc230b391a191f1b52ab6d2

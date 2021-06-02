@@ -59,8 +59,10 @@ namespace CarritoWeb
 
                 master.contarProductos();
 
+
                 Session["lista"] = this.carrito;
             }
+
         }
     }
 }
