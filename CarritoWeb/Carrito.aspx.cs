@@ -11,15 +11,21 @@ namespace CarritoWeb
 {
     public partial class Carrito : System.Web.UI.Page
     {
-        public List<Articulo> carrito;
+        public List<Articulo> carrito = new List<Articulo>();
         protected void Page_Load(object sender, EventArgs e)
         {
-            int id = int.Parse(Request.QueryString["id"]);
-            List<Articulo> articulos = (List<Articulo>)Session["listaArt"];
+            //int id = int.Parse(Request.QueryString["id"]);
+            //List<Articulo> articulos = (List<Articulo>)Session["listaArt"];
 
-            Articulo seleccionado = articulos.Find(x=> x.Id==id);
+            //Articulo seleccionado = articulos.Find(x=> x.Id==id);
 
-            lblSeleccionado.Text=seleccionado.Nombre;
+            //lblSeleccionado.Text=seleccionado.Nombre;
+
+            if(Session["lista"] != null)
+            {
+                carrito = Session["lista"] as List<Articulo>;
+            }
+
 
         }
     }

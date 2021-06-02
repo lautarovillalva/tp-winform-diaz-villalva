@@ -12,13 +12,55 @@ namespace CarritoWeb
     public partial class Productos : System.Web.UI.Page
     {
 
-        public List<Articulo> lista;
-        protected void Page_Load(object sender, EventArgs e)
-        {
-            Articulos_neg neg = new Articulos_neg();
-            this.lista = neg.listaArticulos();
+        public List<Articulo> carrito = new List<Articulo>();
+        public static int contador;
+        public string articulo = "No hay Porducto seleccionado";
 
-            Session.Add("listaArt", lista);
+       
+        public int getContador()
+        {
+            return contador;
+        }
+        
+        protected void Page_Load(object cender, EventArgs e)
+        {
+
+            if (Session["lista"] != null)
+            {
+                carrito = Session["lista"] as List<Articulo>;
+            }
+
+        }
+
+      
+
+        protected void btnAgregar_Command(object sender, CommandEventArgs e)
+        {
+            
+            Articulos_neg neg = new Articulos_neg();
+            List<Articulo> lista = neg.listaArticulos();
+
+            SiteMaster master = new SiteMaster();
+
+            if (e.CommandName == "eventoAgregar")
+            {
+                contador++;
+
+                foreach (Articulo item in lista)
+                {
+                    if(item.Id.ToString() == e.CommandArgument.ToString())
+                    {
+
+                        
+                        this.carrito.Add(item);
+                      
+                    }
+                }
+
+                master.contarProductos();
+
+                Session["lista"] = this.carrito;
+            }
         }
     }
 }

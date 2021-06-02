@@ -2,6 +2,16 @@
     padding: 0px !important;
 }
 
+.body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.body {
+    min-height: 83.6vh;
+}
+
 .navbar-brand img {
     width: 200px;
 }
@@ -69,3 +79,85 @@ footer {
             border-bottom: solid 1px #dfdfdf;
             padding-bottom: 10px;
         }
+
+.card {
+    text-align: center;
+    padding-top: 20px;
+}
+
+.card h5, .card p {
+    text-align: left;
+}
+
+
+
+
+
+.btn-carrito {
+    margin-right: 30px;
+    font-size: 25px;
+    position: relative;
+    cursor: pointer;
+    transition: 1s;
+}
+
+
+    .btn-carrito span {
+        background: #ff9b00;
+        position: absolute;
+        right: 2px;
+        top: 6px;
+        min-width: 20px;
+        text-align: center;
+        border-radius: 50px;
+        font-size: 13px;
+        font-weight: 900;
+        color: #fff;
+    }
+
+.dropdown-menu .dropdown-item {
+    color: #131921 !important;
+}
+
+form span:nth-child(3) {
+    color: #253243;
+    margin-left: -20px;
+    margin-right: 10px;
+    font-size: 30px;
+    font-weight: 100;
+    margin-top: -7px
+}
+
+.dropdown {
+    list-style: none;
+}
+
+
+.carrito {
+    margin-top: 40px;
+}
+
+    .carrito .articulo {
+        display: flex;
+        justify-content: space-between;
+        height: 80px;
+        box-shadow: 2px 2px 15px 5px rgba(0, 0, 0, 0.2);
+        margin-top: 10px;
+        padding: 15px;
+        border-radius: 20px;
+        align-items: center
+    }
+
+        .carrito .articulo h3 {
+            font-size: 20px;
+        }
+
+    .carrito img {
+        width: 70px;
+    }
+
+    .carrito .articulo span {
+        font-size: 23px;
+        font-weight: 600;
+        color: #ff9b00
+    }

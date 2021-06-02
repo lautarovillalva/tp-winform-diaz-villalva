@@ -40,6 +40,9 @@
             </Scripts>
         </asp:ScriptManager>
 
+     
+      
+
        <nav class="navbar navbar-expand-lg navbar-light bg-light">
               <a class="navbar-brand" href="#">
                   <img src="/imagen/logo-white.png" alt="">
@@ -55,15 +58,33 @@
                     <li class="nav-item"><a class="nav-link" runat="server" href="~/Productos">Productos</a></li>
                     <li class="nav-item"><a class="nav-link" runat="server" href="~/About">Acerca de</a></li>
                     <li class="nav-item"><a class="nav-link" runat="server" href="~/Contact">Contacto</a></li>
+                   
+                
                  </ul>
 
                   <form class="form-inline my-2 my-lg-0">
+                      
+
+                          <li class="nav-item dropdown">
+       
+                             <a class="nav-link  btn-carrito" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <i class="fas fa-shopping-cart"></i> <span> <%: contador %> </span>
+                             </a>
+
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                  <asp:Button ID="btnVerCarrito" OnClick="btnVerCarrito_Click" class="dropdown-item" runat="server" Text="Ver carrito" />
+                                  <asp:Button ID="btnFinalizarCompra" class="dropdown-item" runat="server" Text="Finalizar compra" />
+                                  
+                            </div>
+                           </li>d
+                       <span>|</span>
                       <input class="form-control mr-sm-2" type="search" placeholder="Buscar producto" aria-label="Search">
                       <button class="btn btn-outline-warning  my-2 my-sm-0" type="submit">Buscar</button>
                   </form>
             </div>
         </nav>
 
+        <div class="body">
 
         <div class="container body-content">
             <asp:ContentPlaceHolder ID="MainContent" runat="server">
@@ -75,6 +96,8 @@
          <footer>
               <p>&copy; <%: DateTime.Now.Year %> - Web Carrito de compras </p>
          </footer>
+
+         </div>
 
     </form>
 </body>

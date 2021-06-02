@@ -204,6 +204,7 @@ svg {
 
 table {
   border-collapse: collapse;
+    margin-bottom: 0px;
 }
 
 caption {
