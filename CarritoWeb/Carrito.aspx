@@ -4,14 +4,14 @@
 
     <div class="carrito">
 
-    <% foreach (DOMINIO.Articulo item in carrito)
+    <% foreach (DOMINIO.Carro item in carrito)
         { %>
 
           <div class="articulo"> 
 
-              <img src="<%: item.UrlImagen %>" />
-              <h3><%: item.Nombre %></h3>
-              <span><%: item.Precio %></span>
+              <img src="<%: item.Articulo.UrlImagen %>" />
+              <h3><%: item.Articulo.Nombre %></h3>
+              <span><%: item.Subtotal %></span>
 
           </div>  
 

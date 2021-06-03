@@ -4,10 +4,12 @@ using System.Text;
 
 namespace DOMINIO
 {
-    public class Carrito
+    public class Carro
     {
+        public Articulo Articulo { get; set; }
         public int Cantidad { get; set; }
-        public Articulo articulo { get; set; }
-        public decimal Subtotal { get; set; }
+
+        public double Subtotal { get; set; }
+
     }
 }

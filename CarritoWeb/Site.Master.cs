@@ -17,10 +17,10 @@ namespace CarritoWeb
            
         }
 
-        public void contarProductos()
+        public void contarProductos(int cantidad)
         {
-           
-            contador++;
+
+            contador = cantidad;
         }
 
         protected void btnVerCarrito_Click(object sender, EventArgs e)

@@ -11,7 +11,7 @@ namespace CarritoWeb
 {
     public partial class Carrito : System.Web.UI.Page
     {
-        public List<Articulo> carrito = new List<Articulo>();
+        public List<Carro> carrito = new List<Carro>();
         protected void Page_Load(object sender, EventArgs e)
         {
             //int id = int.Parse(Request.QueryString["id"]);
@@ -23,7 +23,7 @@ namespace CarritoWeb
 
             if(Session["lista"] != null)
             {
-                carrito = Session["lista"] as List<Articulo>;
+                carrito = Session["lista"] as List<Carro>;
             }
 
 

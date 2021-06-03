@@ -126,7 +126,7 @@
       </div>
 
     
-    <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:CATALOGO_DBConnectionString %>" SelectCommand="SELECT [Id], [Nombre], [Descripcion], [IdMarca], [IdCategoria], [ImagenUrl], [Precio] FROM [ARTICULOS]"></asp:SqlDataSource>
+    <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:CATALOGO_DBConnectionString2 %>" SelectCommand="SELECT [Id], [Nombre], [Descripcion], [IdMarca], [IdCategoria], [ImagenUrl], [Precio] FROM [ARTICULOS]"></asp:SqlDataSource>
 
 
 

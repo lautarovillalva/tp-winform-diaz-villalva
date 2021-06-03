@@ -11,15 +11,15 @@ namespace CarritoWeb
 {
     public partial class Productos : System.Web.UI.Page
     {
-
-        public List<Articulo> carrito = new List<Articulo>();
+        public List<Carro> carrito = new List<Carro>();
+        //public List<Articulo> carrito = new List<Articulo>();
         public static int contador;
         public string articulo = "No hay Porducto seleccionado";
 
        
         public int getContador()
         {
-            return contador;
+            return carrito.Count();
         }
         
         protected void Page_Load(object cender, EventArgs e)
@@ -27,11 +27,21 @@ namespace CarritoWeb
 
             if (Session["lista"] != null)
             {
-                carrito = Session["lista"] as List<Articulo>;
+                //carrito = Session["lista"] as List<Articulo>;
+                carrito= Session["lista"] as List<Carro>;
             }
 
         }
+        private bool articuloexistente(string id)
+        {
+            bool existe = true;
+            for (int i = 0; i < carrito.Count; i++)
+            {
+                if (id == carrito[i].Articulo.Id.ToString()) return existe;
+            }
 
+            return false;
+        }
       
 
         protected void btnAgregar_Command(object sender, CommandEventArgs e)
@@ -44,23 +54,75 @@ namespace CarritoWeb
 
             if (e.CommandName == "eventoAgregar")
             {
-                contador++;
-
-                foreach (Articulo item in lista)
+                if (getContador() == 0)
                 {
-                    if(item.Id.ToString() == e.CommandArgument.ToString())
+                    foreach (Articulo item in lista)
                     {
+                        if (item.Id.ToString() == e.CommandArgument.ToString())
+                        {
+                            Carro aux = new Carro
+                            {
+                                Articulo = item,
+                                Cantidad = 1,
+                                Subtotal = item.Precio
+                            };
+                            carrito.Add(aux);
 
-                        
-                        this.carrito.Add(item);
-                      
+
+
+                            Session["lista"] = this.carrito;
+
+
+                        }
                     }
                 }
+                //else
+                //{
+                    if (articuloexistente(e.CommandArgument.ToString()) == true)
+                    {
+                    
+                        //for (int i = 0; i < carrito.Count; i++)
+                        //{
+                        //    if (e.CommandArgument.ToString() == carrito[i].Articulo.Id.ToString())
+                        //    {
+                        //        carrito[i].Cantidad++;
+                        //        carrito[i].Subtotal = carrito[i].Subtotal + carrito[i].Articulo.Precio;
 
-                master.contarProductos();
+
+                        //        Session["lista"] = this.carrito;
+                        //    }
+                        //}
+
+                    }
+                    else
+                    {
+                        foreach (Articulo item in lista)
+                        {
+                            if (item.Id.ToString() == e.CommandArgument.ToString())
+                            {
+                                Carro aux = new Carro
+                                {
+                                    Articulo = item,
+                                    Cantidad = 1,
+                                    Subtotal = item.Precio
+                                };
+                                carrito.Add(aux);
 
 
-                Session["lista"] = this.carrito;
+
+                                Session["lista"] = this.carrito;
+
+
+                            }
+                        }
+                    }
+
+                //}
+
+
+                master.contarProductos(carrito.Count);
+
+
             }
 
         }
