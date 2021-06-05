@@ -11,24 +11,29 @@ namespace CarritoWeb
 {
     public partial class Productos : System.Web.UI.Page
     {
+        public SiteMaster master = new SiteMaster();
         public List<Carro> carrito = new List<Carro>();
-        //public List<Articulo> carrito = new List<Articulo>();
-        public static int contador;
+
+
         public string articulo = "No hay Porducto seleccionado";
 
        
-        public int getContador()
-        {
-            return carrito.Count();
-        }
-        
+
         protected void Page_Load(object cender, EventArgs e)
         {
 
             if (Session["lista"] != null)
             {
-                //carrito = Session["lista"] as List<Articulo>;
+
                 carrito= Session["lista"] as List<Carro>;
+
+                int cantidad = 0;
+                foreach (Carro item in carrito)
+                {
+                    cantidad += item.Cantidad;
+
+                }
+                master.setContador(cantidad);
             }
 
         }
@@ -50,11 +55,11 @@ namespace CarritoWeb
             Articulos_neg neg = new Articulos_neg();
             List<Articulo> lista = neg.listaArticulos();
 
-            SiteMaster master = new SiteMaster();
+
 
             if (e.CommandName == "eventoAgregar")
             {
-                if (getContador() == 0)
+                if (master.getContador() == 0)
                 {
                     foreach (Articulo item in lista)
                     {
@@ -76,22 +81,10 @@ namespace CarritoWeb
                         }
                     }
                 }
-                //else
-                //{
+
                     if (articuloexistente(e.CommandArgument.ToString()) == true)
                     {
                     
-                        //for (int i = 0; i < carrito.Count; i++)
-                        //{
-                        //    if (e.CommandArgument.ToString() == carrito[i].Articulo.Id.ToString())
-                        //    {
-                        //        carrito[i].Cantidad++;
-                        //        carrito[i].Subtotal = carrito[i].Subtotal + carrito[i].Articulo.Precio;
-
-
-                        //        Session["lista"] = this.carrito;
-                        //    }
-                        //}
 
                     }
                     else
@@ -117,10 +110,13 @@ namespace CarritoWeb
                         }
                     }
 
-                //}
+                int cantidad=0;
+                foreach (Carro item in carrito)
+                {
+                    cantidad += item.Cantidad;
 
-
-                master.contarProductos(carrito.Count);
+                }
+                master.setContador(cantidad);
 
 
             }

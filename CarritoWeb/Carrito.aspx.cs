@@ -11,21 +11,27 @@ namespace CarritoWeb
 {
     public partial class Carrito : System.Web.UI.Page
     {
+        SiteMaster master = new SiteMaster();
+
         public List<Carro> carrito = new List<Carro>();
         protected void Page_Load(object sender, EventArgs e)
         {
-            //int id = int.Parse(Request.QueryString["id"]);
-            //List<Articulo> articulos = (List<Articulo>)Session["listaArt"];
 
-            //Articulo seleccionado = articulos.Find(x=> x.Id==id);
-
-            //lblSeleccionado.Text=seleccionado.Nombre;
-
-            if(Session["lista"] != null)
+            if (Session["lista"] != null)
             {
                 carrito = Session["lista"] as List<Carro>;
                 lblTotal.Text = "TOTAL: $" + calcularTotal().ToString();
             }
+
+            int cantidad = 0;
+            foreach (Carro item in carrito)
+            {
+                cantidad += item.Cantidad;
+
+            }
+            master.setContador(cantidad);
+            repetidor.DataSource = carrito;
+            repetidor.DataBind();
 
 
         }
@@ -34,7 +40,7 @@ namespace CarritoWeb
             double total = 0;
             for (int i = 0; i < carrito.Count; i++)
             {
-                total+= carrito[i].Subtotal;
+                total += carrito[i].Subtotal;
 
             }
             return total;
@@ -42,38 +48,55 @@ namespace CarritoWeb
 
         protected void btnRestar_Command(object sender, CommandEventArgs e)
         {
-            for (int i = 0; i < carrito.Count; i++)
+            if (e.CommandName == "eventoRestar")
             {
-                if (e.CommandArgument.ToString() == carrito[i].Articulo.Id.ToString())
+            int cantidad = 0;
+                for (int i = 0; i < carrito.Count; i++)
                 {
-                    carrito.Remove(carrito[i]);
+                    if (e.CommandArgument.ToString() == carrito[i].Articulo.Id.ToString())
+                    {
+                        carrito[i].Cantidad--;
+                        carrito[i].Subtotal = carrito[i].Subtotal - carrito[i].Articulo.Precio;
 
-                    Session["lista"] = this.carrito;
+
+                        Session["lista"] = this.carrito;
+                    }
+                    cantidad += carrito[i].Cantidad;
+                    master.setContador(cantidad);
                 }
+
             }
 
         }
 
         protected void btnSumar_Command(object sender, CommandEventArgs e)
         {
-            for (int i = 0; i < carrito.Count; i++)
+            if (e.CommandName == "eventoSumar")
             {
-                if (e.CommandArgument.ToString() == carrito[i].Articulo.Id.ToString())
+                int cantidad = 0;
+                for (int i = 0; i < carrito.Count; i++)
                 {
-                    carrito[i].Cantidad++;
-                    carrito[i].Subtotal = carrito[i].Subtotal + carrito[i].Articulo.Precio;
+                    if (e.CommandArgument.ToString() == carrito[i].Articulo.Id.ToString())
+                    {
+                        carrito[i].Cantidad++;
+                        carrito[i].Subtotal = carrito[i].Subtotal + carrito[i].Articulo.Precio;
 
 
-                    Session["lista"] = this.carrito;
+                        Session["lista"] = this.carrito;
+                    }
+                    cantidad += carrito[i].Cantidad;
+                    master.setContador(cantidad);
                 }
-            }
 
+            }
         }
 
         protected void btnVaciar_Command(object sender, CommandEventArgs e)
         {
             carrito.Clear();
             Session["lista"] = this.carrito;
+
+            master.setContador(0);
             Response.Redirect("Productos.aspx");
         }
     }
