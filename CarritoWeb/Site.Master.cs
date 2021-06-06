@@ -10,15 +10,25 @@ namespace CarritoWeb
 {
     public partial class SiteMaster : MasterPage
     {
-        public  int contador;
+        public static int contador = 0;
 
         protected void Page_Load(object sender, EventArgs e)
         {
-
         }
-        public void setContador(int cant)
+
+        public void setContador(int cont)
         {
-            contador = cant;
+            contador = cont;
+        }
+
+        public void contarProducto()
+        {
+            contador++;
+        }
+
+        public void restarProducto()
+        {
+            contador--;
         }
 
         public int getContador()

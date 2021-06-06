@@ -15,39 +15,60 @@ namespace CarritoWeb
         public List<Carro> carrito = new List<Carro>();
 
 
-        public string articulo = "No hay Porducto seleccionado";
+        public string producto = "";
 
-       
 
         protected void Page_Load(object cender, EventArgs e)
         {
 
+            cargarPorductos();
+
             if (Session["lista"] != null)
             {
-
-                carrito= Session["lista"] as List<Carro>;
-
-                int cantidad = 0;
-                foreach (Carro item in carrito)
-                {
-                    cantidad += item.Cantidad;
-
-                }
-                master.setContador(cantidad);
+                carrito = Session["lista"] as List<Carro>;
             }
 
         }
+
+
+        public void cargarPorductos()
+        {
+            Articulos_neg art = new Articulos_neg();
+            rpProductos.DataSource = art.listaArticulos();
+            rpProductos.DataBind();
+        }
+
+
+         //Verifica si exite el articulo en el carrito en caso contrario devuelve falso 
         private bool articuloexistente(string id)
         {
-            bool existe = true;
-            for (int i = 0; i < carrito.Count; i++)
+
+            foreach(Carro item in carrito)
             {
-                if (id == carrito[i].Articulo.Id.ToString()) return existe;
+                if(id == item.Articulo.Id.ToString())
+                {
+                    return true;
+                }
             }
 
             return false;
         }
-      
+
+
+        //Setea la cantidad y el subtotal de los articulos dentro en del carrito
+        private void sumarCantidad(string id)
+        {
+
+            foreach (Carro item in carrito)
+            {
+                if (id == item.Articulo.Id.ToString())
+                {
+                    item.Cantidad++;
+                    item.Subtotal = item.Subtotal + item.Articulo.Precio;
+                }
+            }
+        }
+
 
         protected void btnAgregar_Command(object sender, CommandEventArgs e)
         {
@@ -55,72 +76,49 @@ namespace CarritoWeb
             Articulos_neg neg = new Articulos_neg();
             List<Articulo> lista = neg.listaArticulos();
 
-
-
             if (e.CommandName == "eventoAgregar")
             {
-                if (master.getContador() == 0)
-                {
                     foreach (Articulo item in lista)
                     {
                         if (item.Id.ToString() == e.CommandArgument.ToString())
                         {
-                            Carro aux = new Carro
-                            {
+
+                        this.producto = item.Nombre;
+
+                        if (!articuloexistente(e.CommandArgument.ToString())) {
+
+                              Carro aux = new Carro
+                              {
                                 Articulo = item,
                                 Cantidad = 1,
                                 Subtotal = item.Precio
-                            };
-                            carrito.Add(aux);
+                              };
 
+                               carrito.Add(aux);
+                           }
 
+                          else
+                          {
+                             sumarCantidad(e.CommandArgument.ToString());
+                          }
 
-                            Session["lista"] = this.carrito;
-
-
-                        }
-                    }
-                }
-
-                    if (articuloexistente(e.CommandArgument.ToString()) == true)
-                    {
-                    
-
-                    }
-                    else
-                    {
-                        foreach (Articulo item in lista)
-                        {
-                            if (item.Id.ToString() == e.CommandArgument.ToString())
-                            {
-                                Carro aux = new Carro
-                                {
-                                    Articulo = item,
-                                    Cantidad = 1,
-                                    Subtotal = item.Precio
-                                };
-                                carrito.Add(aux);
-
-
-
-                                Session["lista"] = this.carrito;
-
-
-                            }
+                           Session["lista"] = this.carrito;
                         }
                     }
 
-                int cantidad=0;
-                foreach (Carro item in carrito)
-                {
-                    cantidad += item.Cantidad;
+                master.contarProducto();
 
-                }
-                master.setContador(cantidad);
-
-
+                
+                mostrarAlerta();
             }
 
         }
+
+
+       public void mostrarAlerta()
+        {
+            alert.Attributes.CssStyle.Add("display", "block");
+        }
+
     }
 }

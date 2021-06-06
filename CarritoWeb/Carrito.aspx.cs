@@ -12,59 +12,64 @@ namespace CarritoWeb
     public partial class Carrito : System.Web.UI.Page
     {
         SiteMaster master = new SiteMaster();
+        private double total;
 
         public List<Carro> carrito = new List<Carro>();
         protected void Page_Load(object sender, EventArgs e)
         {
 
-            if (Session["lista"] != null)
+                if (Session["lista"] != null)
+                {
+                    carrito = Session["lista"] as List<Carro>;
+                    
+                }
+
+            if (!IsPostBack)
             {
-                carrito = Session["lista"] as List<Carro>;
-                lblTotal.Text = "TOTAL: $" + calcularTotal().ToString();
+                calcularTotal();
             }
 
-            int cantidad = 0;
-            foreach (Carro item in carrito)
-            {
-                cantidad += item.Cantidad;
-
-            }
-            master.setContador(cantidad);
             repetidor.DataSource = carrito;
             repetidor.DataBind();
 
-
         }
-        private double calcularTotal()
+        private void calcularTotal()
         {
-            double total = 0;
-            for (int i = 0; i < carrito.Count; i++)
+           
+            foreach(Carro item in carrito)
             {
-                total += carrito[i].Subtotal;
-
+                total += item.Subtotal;
             }
-            return total;
+
+            lblTotal.Text = "TOTAL: $" + total;
+            repetidor.DataBind();
         }
 
         protected void btnRestar_Command(object sender, CommandEventArgs e)
         {
+
             if (e.CommandName == "eventoRestar")
             {
-            int cantidad = 0;
-                for (int i = 0; i < carrito.Count; i++)
+
+                bool paso = false;
+                
+                foreach(Carro item in carrito)
                 {
-                    if (e.CommandArgument.ToString() == carrito[i].Articulo.Id.ToString())
+                    if(item.Articulo.Id.ToString() == e.CommandArgument.ToString() && item.Cantidad >= 2 )
                     {
-                        carrito[i].Cantidad--;
-                        carrito[i].Subtotal = carrito[i].Subtotal - carrito[i].Articulo.Precio;
-
-
-                        Session["lista"] = this.carrito;
+                        item.Cantidad--;
+                        item.Subtotal = item.Subtotal - item.Articulo.Precio;
+                        paso = true;
                     }
-                    cantidad += carrito[i].Cantidad;
-                    master.setContador(cantidad);
                 }
 
+                if (paso) {
+                    master.restarProducto();
+                    calcularTotal();
+                    repetidor.DataBind();
+                    paso = false;
+                }
+             
             }
 
         }
@@ -73,21 +78,19 @@ namespace CarritoWeb
         {
             if (e.CommandName == "eventoSumar")
             {
-                int cantidad = 0;
-                for (int i = 0; i < carrito.Count; i++)
+                foreach (Carro item in carrito)
                 {
-                    if (e.CommandArgument.ToString() == carrito[i].Articulo.Id.ToString())
+                    if (item.Articulo.Id.ToString() == e.CommandArgument.ToString() )
                     {
-                        carrito[i].Cantidad++;
-                        carrito[i].Subtotal = carrito[i].Subtotal + carrito[i].Articulo.Precio;
+                        item.Cantidad++;
+                        item.Subtotal = item.Subtotal + item.Articulo.Precio;
 
-
-                        Session["lista"] = this.carrito;
                     }
-                    cantidad += carrito[i].Cantidad;
-                    master.setContador(cantidad);
                 }
 
+                master.contarProducto();
+                calcularTotal();
+                repetidor.DataBind();
             }
         }
 

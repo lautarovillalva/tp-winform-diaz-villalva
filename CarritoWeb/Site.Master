@@ -66,17 +66,21 @@
                       
 
                           <li class="nav-item dropdown">
-       
+                              <asp:UpdatePanel ID="UpdatePanel1" runat="server">
+                                   <contenttemplate>
                              <a class="nav-link  btn-carrito" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 <i class="fas fa-shopping-cart"></i> <span> <%: contador %> </span>
                              </a>
-
+                                
                             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                                   <asp:Button ID="btnVerCarrito" OnClick="btnVerCarrito_Click" class="dropdown-item" runat="server" Text="Ver carrito" />
                                   <asp:Button ID="btnFinalizarCompra" class="dropdown-item" runat="server" Text="Finalizar compra" />
                                   
                             </div>
-                           </li>d
+
+                                         </contenttemplate>
+                              </asp:UpdatePanel>
+                           </li>
                        <span>|</span>
                       <input class="form-control mr-sm-2" type="search" placeholder="Buscar producto" aria-label="Search">
                       <button class="btn btn-outline-warning  my-2 my-sm-0" type="submit">Buscar</button>

@@ -3,43 +3,31 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
 
 
-    <%--    <div class="carrito">
+    <% if (carrito.Count != 0)
+        { %>
 
-        <% foreach (DOMINIO.Carro item in carrito)
-            { %>
-
-        <div class="articulo">
-
-            <img src="<%: item.Articulo.UrlImagen %>" />
-            <h3><%: item.Articulo.Nombre %></h3>
-            <asp:Button ID="btnSumar" CssClass="btn btn-outline-warning" runat="server" CommandArgument='<%#Eval("Id") %>' CommandName="eventoSumar" OnCommand="btnSumar_Command" Text="+1" UseSubmitBehavior="false" />
-            <h3><%:item.Cantidad %></h3>
-            <asp:Button ID="btnRestar" CssClass="btn btn-outline-warning" runat="server" CommandArgument='<%#Eval("Id") %>' CommandName="eventoRestar" OnCommand="btnRestar_Command" Text="-1" UseSubmitBehavior="false" />
-            <span><%: item.Subtotal %></span>
-
-        </div>
-
-        <%} %>
-        <div>
-            <h4>
-                <asp:Label ID="lblTotal" runat="server" Text=""></asp:Label></h4>
-            <asp:Button ID="btnVaciar" CssClass="btn btn-outline-warning" CommandName="eventoVaciar" OnCommand="btnVaciar_Command"  Text="Vaciar Carrito" runat="server" UseSubmitBehavior="false" />
-        </div>
-
-    </div>--%>
-
-
+    <asp:UpdatePanel ID="UpdatePanel1" runat="server">
+        <contenttemplate>
 
     <div class="carrito">
         <asp:Repeater runat="server" ID="repetidor">
             <ItemTemplate>
                 <div class="articulo">
-                    <img src='<%#Eval("Articulo.UrlImagen")%>' alt='<%# Eval("Articulo.Nombre")%>' />
-                    <h3><%#Eval("Articulo.Nombre") %></h3>
-                    <asp:Button ID="btnSumar" CssClass="btn btn-outline-warning" runat="server" CommandArgument='<%#Eval("Articulo.Id") %>' CommandName="eventoSumar" OnCommand="btnSumar_Command" Text="+1" UseSubmitBehavior="false"  />
-                    <h3><%#Eval("Cantidad") %></h3>
-                    <asp:Button ID="btnRestar" CssClass="btn btn-outline-warning" runat="server" CommandArgument='<%#Eval("Articulo.Id") %>' CommandName="eventoRestar" OnCommand="btnRestar_Command" Text="-1" UseSubmitBehavior="false" />
-                    <span><%# Eval("Subtotal") %></span>
+
+                    <div class="nombre">
+                       <img src='<%#Eval("Articulo.UrlImagen")%>' alt='<%# Eval("Articulo.Nombre")%>' />
+                       <h3><%#Eval("Articulo.Nombre") %></h3>
+                    </div>
+
+                    <div class="cantidad">
+
+                      <asp:Button ID="btnSumar" CssClass="btn btn-outline-warning" runat="server" CommandArgument='<%#Eval("Articulo.Id") %>' CommandName="eventoSumar" OnCommand="btnSumar_Command" Text="+1" UseSubmitBehavior="false"  />
+                      <h3><%#Eval("Cantidad") %></h3>
+                      <asp:Button ID="btnRestar" CssClass="btn btn-outline-warning" runat="server" CommandArgument='<%#Eval("Articulo.Id") %>' CommandName="eventoRestar" OnCommand="btnRestar_Command" Text="-1" UseSubmitBehavior="false" />
+                    
+                    </div>
+
+                    <span>$<%# Eval("Subtotal") %></span>
 
                 </div>
 
@@ -47,25 +35,31 @@
 
         </asp:Repeater>
 
-        <div>
-            <h4>
-                <asp:Label ID="lblTotal" runat="server" Text=""></asp:Label></h4>
+        <hr />
+        <div class="total">
+            
             <asp:Button ID="btnVaciar" CssClass="btn btn-outline-warning" CommandName="eventoVaciar" OnCommand="btnVaciar_Command"  Text="Vaciar Carrito" runat="server" UseSubmitBehavior="false" />
+            <h4><asp:Label ID="lblTotal" runat="server" Text=""></asp:Label></h4>
         </div>
-
-
-
-
 
 
     </div>
 
 
 
+            </contenttemplate>
+    </asp:UpdatePanel>
 
+    <%}
+        else
+        {%>
+            
+        <div class="carrito-vacio">
+          
+            <img src="https://www.imichile.cl/wp-content/uploads/2021/02/carro-vacio.png" />
+              <h3>El carrito se encuntra vacio</h3>
+        </div>
 
-
-
-
+        <%} %>
 
 </asp:Content>
