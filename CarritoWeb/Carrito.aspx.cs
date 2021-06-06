@@ -18,11 +18,11 @@ namespace CarritoWeb
         protected void Page_Load(object sender, EventArgs e)
         {
 
-                if (Session["lista"] != null)
-                {
-                    carrito = Session["lista"] as List<Carro>;
-                    
-                }
+            if (Session["lista"] != null)
+            {
+                carrito = Session["lista"] as List<Carro>;
+
+            }
 
             if (!IsPostBack)
             {
@@ -35,8 +35,8 @@ namespace CarritoWeb
         }
         private void calcularTotal()
         {
-           
-            foreach(Carro item in carrito)
+
+            foreach (Carro item in carrito)
             {
                 total += item.Subtotal;
             }
@@ -53,10 +53,10 @@ namespace CarritoWeb
                 Carro aux = new Carro();
 
                 bool paso = false;
-                
-                foreach(Carro item in carrito)
+
+                foreach (Carro item in carrito)
                 {
-                    if(item.Articulo.Id.ToString() == e.CommandArgument.ToString() && item.Cantidad >= 1 )
+                    if (item.Articulo.Id.ToString() == e.CommandArgument.ToString() && item.Cantidad >= 1)
                     {
                         aux = item;
                         item.Cantidad--;
@@ -69,13 +69,14 @@ namespace CarritoWeb
                     carrito.Remove(aux);
                 }
 
-                if (paso) {
+                if (paso)
+                {
                     master.restarProducto();
                     calcularTotal();
                     repetidor.DataBind();
                     paso = false;
                 }
-             
+
             }
 
         }
@@ -86,7 +87,7 @@ namespace CarritoWeb
             {
                 foreach (Carro item in carrito)
                 {
-                    if (item.Articulo.Id.ToString() == e.CommandArgument.ToString() )
+                    if (item.Articulo.Id.ToString() == e.CommandArgument.ToString())
                     {
                         item.Cantidad++;
                         item.Subtotal = item.Subtotal + item.Articulo.Precio;
@@ -107,6 +108,29 @@ namespace CarritoWeb
 
             master.setContador(0);
             Response.Redirect("Productos.aspx");
+        }
+
+        protected void lnkEliminar_Command(object sender, CommandEventArgs e)
+        {
+            Carro aux = new Carro();
+            if (e.CommandName == "eventoEliminar")
+            {
+                foreach (Carro item in carrito)
+                {
+                    if (item.Articulo.Id.ToString() == e.CommandArgument.ToString())
+                    {
+                        aux = item;
+                        
+                    }
+
+                }
+
+                carrito.Remove(aux);
+                master.setContador(master.getContador() - aux.Cantidad);
+                calcularTotal();
+                repetidor.DataBind();
+            }
+
         }
     }
 }

@@ -31,7 +31,7 @@
     </div>
 
                     <div runat="server" id="alert" class="alert alert-success" role="alert">
-                        <%: producto %>  se ah agregado al carrito!
+                        <%: producto %>  se ha agregado al carrito!
                      </div>
 
         </contenttemplate>
