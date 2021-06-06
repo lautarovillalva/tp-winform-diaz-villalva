@@ -50,17 +50,23 @@ namespace CarritoWeb
 
             if (e.CommandName == "eventoRestar")
             {
+                Carro aux = new Carro();
 
                 bool paso = false;
                 
                 foreach(Carro item in carrito)
                 {
-                    if(item.Articulo.Id.ToString() == e.CommandArgument.ToString() && item.Cantidad >= 2 )
+                    if(item.Articulo.Id.ToString() == e.CommandArgument.ToString() && item.Cantidad >= 1 )
                     {
+                        aux = item;
                         item.Cantidad--;
                         item.Subtotal = item.Subtotal - item.Articulo.Precio;
                         paso = true;
                     }
+                }
+                if (aux.Cantidad == 0)
+                {
+                    carrito.Remove(aux);
                 }
 
                 if (paso) {
