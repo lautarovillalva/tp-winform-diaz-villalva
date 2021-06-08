@@ -26,10 +26,15 @@
                                 <asp:Button ID="btnRestar" CssClass="btn btn-outline-warning" runat="server" CommandArgument='<%#Eval("Articulo.Id") %>' CommandName="eventoRestar" OnCommand="btnRestar_Command" Text="-1" UseSubmitBehavior="false" />
 
                             </div>
+                            <div class="precio">
 
                             <span>$<%# Eval("Subtotal") %></span>
-                            <asp:LinkButton ID="lnkEliminar" CommandName="eventoEliminar" CommandArgument='<%#Eval("Articulo.Id") %>' OnCommand="lnkEliminar_Command" runat="server">Eliminar</asp:LinkButton>
 
+                            </div>
+                            <div>
+                            <asp:LinkButton ID="lnkEliminar" CommandName="eventoEliminar" CommandArgument='<%#Eval("Articulo.Id") %>' OnCommand="lnkEliminar_Command" runat="server"><asp:image imageurl="https://img.icons8.com/cotton/64/ffffff/delete-sign--v2.png" runat="server" /></asp:LinkButton>
+
+                            </div>
                         </div>
 
                     </ItemTemplate>
