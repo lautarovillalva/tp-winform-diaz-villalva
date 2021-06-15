@@ -6,13 +6,17 @@
     <asp:UpdatePanel ID="UpdatePanel1" runat="server">
         <contenttemplate>
 
-    <div class="card-columns productos">
+    <div class="card-columns container productos">
         <asp:Repeater ID="rpProductos" runat="server">
                <ItemTemplate>
 
+
                  <div class="card">
-                    <asp:ImageButton ID="ImageButton1" runat="server" ImageUrl='<%# Eval("UrlImagen") %>' />
-                
+
+                     <a href="Detalles.aspx?id=<%# Eval("Id") %>"> 
+                         <img src="<%# Eval("UrlImagen") %>" />
+                     </a>
+
                     <div class="card-body">
                        <h5> <asp:Label ID="NombreLabel" runat="server" Text='<%# Eval("Nombre") %>'></asp:Label></h5>
                        <p><asp:Label ID="DescripcionLabel" runat="server" Text='<%# Eval("Descripcion") %>'></asp:Label></p>

@@ -9,12 +9,14 @@
     <asp:UpdatePanel ID="UpdatePanel1" runat="server">
         <ContentTemplate>
 
-            <div class="carrito">
+            <div class="carrito container">
                 <asp:Repeater runat="server" ID="repetidor">
                     <ItemTemplate>
-                        <div class="articulo">
+
+                        <div class="articulo ">
 
                             <div class="nombre">
+                                <asp:LinkButton ID="lnkEliminar" CommandName="eventoEliminar" CommandArgument='<%#Eval("Articulo.Id") %>' OnCommand="lnkEliminar_Command" runat="server"><i class="fas fa-times"></i></asp:LinkButton>
                                 <img src='<%#Eval("Articulo.UrlImagen")%>' alt='<%# Eval("Articulo.Nombre")%>' />
                                 <h3><%#Eval("Articulo.Nombre") %></h3>
                             </div>
@@ -28,7 +30,7 @@
                             </div>
 
                             <span>$<%# Eval("Subtotal") %></span>
-                            <asp:LinkButton ID="lnkEliminar" CommandName="eventoEliminar" CommandArgument='<%#Eval("Articulo.Id") %>' OnCommand="lnkEliminar_Command" runat="server">Eliminar</asp:LinkButton>
+                            
 
                         </div>
 

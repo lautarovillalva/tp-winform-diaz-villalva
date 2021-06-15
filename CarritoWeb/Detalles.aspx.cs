@@ -11,23 +11,42 @@ namespace CarritoWeb
 {
     public partial class Detalles : System.Web.UI.Page
     {
-        public Articulo ArticuloDetalle { get; set; }
+        public SiteMaster master = new SiteMaster();
+        public Articulo ArticuloDetalle ;
+        private string IdArticulo = "";
+        public List<Carro> carrito = new List<Carro>();
+        public static int cantidad = 1;
+
         protected void Page_Load(object sender, EventArgs e)
         {
-            Articulos_neg articulos_Neg = new Articulos_neg();
-            List<Articulo> listado;
-            try
-            {
-                listado = articulos_Neg.listaArticulos();
-                int id = int.Parse(Request.QueryString["Id"]);
-                
-                ArticuloDetalle = listado.Find(x => x.Id == id);
 
-            }
-            catch (Exception ex)
+            IdArticulo = Request.QueryString["id"];
+
+            ArticuloDetalle = new Articulo();
+            buscarArticulo();
+
+            if (Session["lista"] != null)
             {
-                //reponse error.aspx
-                throw ex;
+                carrito = Session["lista"] as List<Carro>;
+            }
+
+        }
+
+
+        public void buscarArticulo()
+        {
+            Articulos_neg neg = new Articulos_neg();
+            List<Articulo> lista = neg.listaArticulos();
+
+            foreach(Articulo item in lista)
+            {
+              
+              
+                    if (IdArticulo == item.Id.ToString())
+                    {
+                        this.ArticuloDetalle = item;
+                    }
+
             }
 
         }
@@ -35,6 +54,89 @@ namespace CarritoWeb
         protected void btnVolver_Click(object sender, EventArgs e)
         {
             Response.Redirect("Productos.aspx");
+        }
+
+
+        public void sumarCantidad(string id)
+        {
+
+            foreach (Carro item in carrito)
+            {
+                if (id == item.Articulo.Id.ToString())
+                {
+                    item.Cantidad+= cantidad;
+                    item.Subtotal = item.Subtotal + item.Articulo.Precio;
+                }
+            }
+        }
+
+
+        public bool articuloexistente(string id)
+        {
+
+            foreach (Carro item in carrito)
+            {
+                if (id == item.Articulo.Id.ToString())
+                {
+                    return true;
+                }
+            }
+
+            return false;
+        }
+
+
+
+        protected void btnAgregar_Click(object sender, EventArgs e)
+        {
+
+
+            if (!articuloexistente(this.IdArticulo.ToString()))
+            {
+
+
+                Carro aux = new Carro
+                {
+                    Articulo = ArticuloDetalle,
+                    Cantidad = cantidad,
+                    Subtotal = ArticuloDetalle.Precio * Convert.ToDouble(cantidad)
+                };
+
+                carrito.Add(aux);
+               
+            }
+
+            else
+            {
+               sumarCantidad(this.IdArticulo.ToString());
+            }
+
+            Session["lista"] = carrito;
+
+            for (int i = 0; i < cantidad; i++)
+            {
+                master.contarProducto();
+            }
+
+            cantidad = 1;
+            mostrarAlerta();
+
+        }
+
+        protected void btnSumar_Click(object sender, EventArgs e)
+        {
+            cantidad++;
+        }
+
+        protected void btnRestar_Click(object sender, EventArgs e)
+        {
+            cantidad--;
+        }
+
+
+        public void mostrarAlerta()
+        {
+            alert.Attributes.CssStyle.Add("display", "block");
         }
     }
 }

@@ -39,8 +39,8 @@ namespace CarritoWeb
         }
 
 
-         //Verifica si exite el articulo en el carrito en caso contrario devuelve falso 
-        private bool articuloexistente(string id)
+        //Verifica si exite el articulo en el carrito en caso contrario devuelve falso 
+        public bool articuloexistente(string id)
         {
 
             foreach(Carro item in carrito)
@@ -56,7 +56,7 @@ namespace CarritoWeb
 
 
         //Setea la cantidad y el subtotal de los articulos dentro en del carrito
-        private void sumarCantidad(string id)
+        public  void  sumarCantidad(string id)
         {
 
             foreach (Carro item in carrito)
@@ -102,7 +102,7 @@ namespace CarritoWeb
                              sumarCantidad(e.CommandArgument.ToString());
                           }
 
-                           Session["lista"] = this.carrito;
+                           Session["lista"] = carrito;
                         }
                     }
 
@@ -120,5 +120,6 @@ namespace CarritoWeb
             alert.Attributes.CssStyle.Add("display", "block");
         }
 
+     
     }
 }

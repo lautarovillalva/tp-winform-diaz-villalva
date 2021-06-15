@@ -40,7 +40,6 @@
             </Scripts>
         </asp:ScriptManager>
 
-     
       
 
        <nav class="navbar navbar-expand-lg navbar-light bg-light">
@@ -77,20 +76,42 @@
                                   <asp:Button ID="btnFinalizarCompra" class="dropdown-item" runat="server" Text="Finalizar compra" />
                                   
                             </div>
-
+                             
                                          </contenttemplate>
                               </asp:UpdatePanel>
                            </li>
                        <span>|</span>
-                      <input class="form-control mr-sm-2" type="search" placeholder="Buscar producto" aria-label="Search">
-                      <button class="btn btn-outline-warning  my-2 my-sm-0" type="submit">Buscar</button>
+
+                      <asp:UpdatePanel ID="UpdatePanel2" runat="server">
+                                   <contenttemplate>
+                      <asp:TextBox class="form-control mr-sm-2" placeholder="Buscar producto"  ID="txtFiltrar" runat="server" OnTextChanged="txtFiltrar_TextChanged" AutoPostBack="True" ValidateRequestMode="Disabled" ></asp:TextBox>
+                                  
+                             <% if(listaFiltro.Count > 0)
+                                 { %>
+                              <div class="articulos-filtrados">
+                              <%foreach(DOMINIO.Articulo item in listaFiltro)
+                                  { %>
+
+                                  <a href="Detalles.aspx?id=<%: item.Id %>">
+                                    <div class="articulo">
+                                        <img src="<%: item.UrlImagen %>" />
+                                        <span><%: item.Nombre %></span>
+                                     </div>
+                                  </a>
+
+                                <%} %>
+                             </div>
+                           <%} %>
+                          </contenttemplate>
+                              </asp:UpdatePanel>           
+
                   </form>
             </div>
         </nav>
 
         <div class="body">
 
-        <div class="container body-content">
+        <div class="container-fluid body-content">
             <asp:ContentPlaceHolder ID="MainContent" runat="server">
             </asp:ContentPlaceHolder>
             <hr />
@@ -104,5 +125,10 @@
          </div>
 
     </form>
+
+
+
+
+   
 </body>
 </html>
