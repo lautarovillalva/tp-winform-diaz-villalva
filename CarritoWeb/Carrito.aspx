@@ -28,10 +28,12 @@
                                 <asp:Button ID="btnRestar" CssClass="btn btn-outline-warning" runat="server" CommandArgument='<%#Eval("Articulo.Id") %>' CommandName="eventoRestar" OnCommand="btnRestar_Command" Text="-1" UseSubmitBehavior="false" />
 
                             </div>
+                            <div class="precio">
 
                             <span>$<%# Eval("Subtotal") %></span>
                             
 
+                            </div>
                         </div>
 
                     </ItemTemplate>

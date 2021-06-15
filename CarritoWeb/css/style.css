@@ -140,7 +140,7 @@ form span:nth-child(3) {
 
     .carrito .articulo {
         display: grid;
-        grid-template-columns: 600px 200px 1fr;
+        grid-template-columns: 3fr 2fr 2fr 1fr;
         align-content: center;
         grid-gap: 10px;
         height: 80px;
@@ -159,18 +159,19 @@ form span:nth-child(3) {
         width: 55%;
     }
 
-    .carrito .articulo span {
-        font-size: 23px;
-        font-weight: 600;
-        color: #ff9b00; 
-        background: red;
-        padding: 13px;
-        text-align: center;
-        background: #131921;
-        box-shadow: 1px 2px 5px 3px rgba(0, 0, 0, 0.3);
-        border-top-right-radius: 10px;
-        border-bottom-right-radius: 10px;
-    }
+.precio {
+    text-align: center;
+    font-size: 23px;
+    font-weight: 600;
+    color: #ff9b00;
+    background: red;
+    padding: 10px;
+
+    background: #131921;
+    box-shadow: 1px 2px 5px 3px rgba(0, 0, 0, 0.3);
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
 
 
 .cantidad {
@@ -179,7 +180,6 @@ form span:nth-child(3) {
     margin: auto;
     box-shadow: 1px 2px 5px 3px rgba(0, 0, 0, 0.1);
     padding: 10px;
-    padding-left: 20px;
     background: #fff;
 }
 
